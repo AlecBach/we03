@@ -1,0 +1,127 @@
+$darkerGrey : #303030;
+$activeGrey: #424242;
+$darkGrey : #4C4C4C;
+$lighterGrey : #E4E5E5;
+$offWhite: #FAFAFA;
+
+body{
+	background-color: $offWhite;
+}
+
+@font-face {
+  	font-family: 'Montserrat';
+  	font-style: normal;
+  	font-weight: 700;
+  	src: local('Montserrat-Bold'), url(../fonts/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2) format('woff2');
+  	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.active, .menu .active > a {
+	background-color: $activeGrey;
+}
+.nav-item:hover, .menu li > a:hover {
+	background-color: $darkGrey;
+}
+
+.top-nav-bar {
+	background-color: $darkerGrey;
+	border-bottom: 1px solid $darkGrey;
+	
+}
+
+.nav-text, .nav-header {
+	color: $lighterGrey !important;
+	margin: 10px;
+	font-family: 'Montserrat';
+	font-size: 1.4em;
+}
+.nav-header {
+	margin: 11px 10px;
+	margin-left: 0;
+    line-height: 1.05em;
+    font-size: 1.8em;
+}
+.fullWidth {
+	width: 100% !important;
+   	margin-left: 0;
+   	margin-right: 0;
+   	padding-left: 0;
+   	padding-right: 0;
+   	max-width: initial;
+}
+
+.hide {
+	display: none !important;
+}
+.burger-cont{
+	z-index: 1;
+	margin: 12px 10px;
+    margin-right: 0px;
+    margin-left: 15px;
+	.burger-line {
+		width: 30px;
+		height: 6px;
+		margin-bottom: 5px;
+		background-color: $lighterGrey;
+	}
+	.burger-line:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.burger-menu {
+	display: none;
+	ul{
+		li{
+			border-top: 1px solid $darkGrey;
+			a {
+				color: $lighterGrey;
+				font-family: 'Montserrat';
+				font-size: 1.1em;
+				padding-left: 0.625rem;
+				padding-right: 0.625rem;
+			}
+			@media screen and (min-width: 40em){
+				a {
+				    padding-left: 0.9375rem;
+				    padding-right: 0.9375rem;
+				}
+			}
+		}
+	}
+}
+
+.nav {
+	overflow: hidden;
+	height: 52px;
+	margin: 0;
+	.nav-item {
+		display: inline-block;
+		padding: 0 12px;
+		height: 52px;
+		border-left: 1px solid $darkGrey;
+		a {
+				color: $lighterGrey;
+				font-family: 'Montserrat';
+				font-size: 1.1em;
+				line-height: 52px;;
+			}
+	}
+	.nav-item:first-child {
+		border-right: 1px solid $darkGrey;
+	}
+}
+
+.hero-image{
+	background-image: url(http://placehold.it/800x400);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	.home-hero-text {
+		font-size: 1.5em;
+		color: $darkerGrey;
+		line-height: 1.1em;
+		margin-top: 150px;
+		margin-bottom: 150px;
+	}
+}
