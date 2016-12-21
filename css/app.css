@@ -93,6 +93,10 @@ body {
 #footer {
   background-color: #303030;
   color: #e4e5e5; }
+  #footer span {
+    color: #fafafa;
+    font-family: 'Montserrat';
+    font-size: 1.2em; }
 
 .hero-image {
   background-image: url(http://placehold.it/800x400);

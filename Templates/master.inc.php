@@ -71,9 +71,9 @@
     <div class="row expanded" id="footer">
       <div class="columns medium-offset-1 medium-10 xl-padding">
         <div class="row expanded bump-large">
-          <div class="columns medium-4 small-6">hey this is my footer content i hope u enjoy buddy</div>
-          <div class="columns medium-4 small-6">hey this is my footer content i hope u enjoy buddy</div>
-          <div class="columns medium-4 hide-for-small-only">hey this is my footer content i hope u enjoy buddy</div>
+          <div class="columns medium-4 small-6"><span>CONTACT</span><hr>hey man hit me up for all the latest wellington clubbing hotspots, 0800-30-40-50</div>
+          <div class="columns medium-4 small-6"><span>SOCIAL</span><hr><ul><li><a href="">Facebukk</a></li><li><a href="">Instagramz</a></li><li><a href="">Snapchit</a></li></ul></div>
+          <div class="columns medium-4 hide-for-small-only"><span>WORLD CLASS, LOCALLY</span><hr>if u lookin for that good good sweet christmas design then u gotta hit me up my man im telling you o.O</div>
         </div>
       </div>
     </div>

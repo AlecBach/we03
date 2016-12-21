@@ -118,6 +118,11 @@ body{
 	background-color: $darkerGrey;
 	color: $lighterGrey;
 	//height: 300px;
+	span {
+		color: $offWhite;
+		font-family: 'Montserrat';
+		font-size: 1.2em;
+	}
 }
 .hero-image{
 	background-image: url(http://placehold.it/800x400);
