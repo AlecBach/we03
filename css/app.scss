@@ -26,9 +26,9 @@ body{
 .top-nav-bar {
 	background-color: $darkerGrey;
 	border-bottom: 1px solid $darkGrey;
-	
+	position: fixed;
+	top: 0;	
 }
-
 .nav-text, .nav-header {
 	color: $lighterGrey !important;
 	margin: 10px;
@@ -71,15 +71,18 @@ body{
 
 .burger-menu {
 	display: none;
+	position: fixed;
+	top: 53px;
 	ul{
 		li{
-			border-top: 1px solid $darkGrey;
+			border-bottom: 1px solid $darkGrey;
 			a {
 				color: $lighterGrey;
 				font-family: 'Montserrat';
 				font-size: 1.1em;
 				padding-left: 0.625rem;
 				padding-right: 0.625rem;
+				background-color: $darkerGrey;
 			}
 			@media screen and (min-width: 40em){
 				a {
@@ -111,17 +114,72 @@ body{
 		border-right: 1px solid $darkGrey;
 	}
 }
-
+#footer {
+	background-color: $darkerGrey;
+	color: $lighterGrey;
+	//height: 300px;
+}
 .hero-image{
 	background-image: url(http://placehold.it/800x400);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	.home-hero-text {
-		font-size: 1.5em;
-		color: $darkerGrey;
-		line-height: 1.1em;
-		margin-top: 150px;
-		margin-bottom: 150px;
+	.home-hero-cont {
+		height: 400px;
+		.home-hero-text {
+			font-size: 1.5em;
+			color: $darkerGrey;
+			line-height: 1.1em;
+			// margin-top: 150px;
+			// margin-bottom: 150px;
+		}
+	
+	}
+}
+.bump-for-nav{
+	margin-top: 53px;
+}
+.bump-small{
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+.bump-medium{
+	margin-top: 1.2rem;
+	margin-bottom: 1.2rem;
+}
+.bump-large{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.main {
+	// margin-top: 20px;
+	// margin-bottom: 20px;
+	span{
+		font-size: 1.6em;
+	}
+	> .columns {
+		.columns {
+			//border: 1px solid $lighterGrey;
+		}
+	}
+}
+hr {
+	max-width: 99999px;
+	margin: 0.5rem 0 0.75rem 0;
+}
+@media print, screen and (min-width: 40em){
+	.hero-image > .home-hero-cont {
+		height: 475px;
+	}
+}
+@media print, screen and (min-width: 75em){
+	.hero-image > .home-hero-cont {
+		height: 550px;
+	}
+	.xl-padding, .xl-padding-right {
+		padding-right: 50px
+	}
+	.xl-padding, .xl-padding-left {
+		padding-left: 50px
 	}
 }
