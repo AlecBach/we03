@@ -34,24 +34,56 @@
           
           
         </div>
-        <div class="large-12 burger-menu columns fullWidth">
-          <ul class="menu vertical">
-            <li<?php if($page === "home"):?> class="active" <?php endif; ?>><a href="./">HOME</a></li>
-            <li<?php if($page === "blog"):?> class="active" <?php endif; ?>><a href="./?page=blog">BLOG</a></li>
-            <li<?php if($page === "about"):?> class="active" <?php endif; ?>><a href="./?page=about">ABOUT</a></li>
-            <li<?php if($page === "portfolio"):?> class="active" <?php endif; ?>><a href="./?page=portfolio">PORTFOLIO</a></li>
-            <li<?php if($page === "contact"):?> class="active" <?php endif; ?>><a href="./?page=contact">CONTACT</a></li>
-            <?php if(isset($_SESSION['email'])): ?><li<?php if($page === "account"):?> class="active" <?php endif; ?>><a href="./?page=account">ACCOUNT</a></li><?php endif; ?>
-            <li><a href="./?page=login"><?php if(isset($_SESSION['email'])): ?>LOG OUT<?php else: ?>LOG IN<?php endif; ?></a></li>
-          </ul>
-        </div>
+        
       <!-- </div> -->
     </div>
-    <?php $this->content() ?>
+    <div class="bump-for-nav"></div>
+    <div class="burger-menu row fullWidth">
+      <ul class="menu vertical">
+        <li<?php if($page === "home"):?> class="active" <?php endif; ?>><a href="./">HOME</a></li>
+        <li<?php if($page === "blog"):?> class="active" <?php endif; ?>><a href="./?page=blog">BLOG</a></li>
+        <li<?php if($page === "about"):?> class="active" <?php endif; ?>><a href="./?page=about">ABOUT</a></li>
+        <li<?php if($page === "portfolio"):?> class="active" <?php endif; ?>><a href="./?page=portfolio">PORTFOLIO</a></li>
+        <li<?php if($page === "contact"):?> class="active" <?php endif; ?>><a href="./?page=contact">CONTACT</a></li>
+        <?php if(isset($_SESSION['email'])): ?><li<?php if($page === "account"):?> class="active" <?php endif; ?>><a href="./?page=account">ACCOUNT</a></li><?php endif; ?>
+        <li><a href="./?page=login"><?php if(isset($_SESSION['email'])): ?>LOG OUT<?php else: ?>LOG IN<?php endif; ?></a></li>
+      </ul>
+    </div>
 
-    <div class="hero-image row fullWidth">
-      <div class="columns small-offset-1 small-10 medium-offset-5 medium-5 home-hero-text">
-        Welcome to my site. Feel free to explore my blog posts, check out my portfolio, learn about me, contact me or create an account!
+    <?php $this->content() ?>
+    <div id="content">
+      <div class="hero-image row fullWidth">
+        <div class="columns small-offset-1 small-10 medium-offset-6 medium-5 home-hero-cont">
+          <div class="row home-hero-text xl-padding-right">
+            Welcome to my site. Feel free to explore my blog posts, check out my portfolio, learn about me, contact me or create an account!
+          </div>
+        </div>
+      </div>
+      <div class="row expanded main bump-medium">
+        <div class="columns medium-offset-1 medium-10 xl-padding">
+          <span>Hiya!</span><hr>I am a web specialist based in the capital of New Zealand, Wellington. I can provide front end design and server side programming. On this site I have many sites that I have already completed,  my blog where I post irregularly about my opinions &amp; random stuff and a small page dedicated to information on me. Please dive in and enjoy the works you see!
+          <div class="row expanded bump-small">
+            <div class="columns small-12 medium-4">To read more about me and my journey through life, explore <a href="">here!</a></div><div class="columns small-12 medium-4">To see what I've been up to lately, take a look at my blog <a href="">here!</a></div><div class="columns small-12 medium-4">If you're bored of me already, You can check out my sites <a href="">here!</a></div>
+          </div>
+        </div>
+      </div>
+      <a href="http://we04.alec.bach.yoobee.net.nz/">
+        <div class="row expanded main bump-medium" id="latest-work">
+        <div id="darken-clarity"></div>
+         <div class="columns medium-offset-1 medium-10 xl-padding padding-vert-med">
+           <span>Latest work: WellyBrews</span><hr><p>This project was a test of my front end programming capabilities and problem solving. Incorporating some of the animations on the site was very challenging, and helped me learn a lot. As part of my Yoobee course, I was judged for my coding and visual aesthetic. View the site <span>here!</span></p>
+         </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="row expanded" id="footer">
+      <div class="columns medium-offset-1 medium-10 xl-padding">
+        <div class="row expanded bump-large">
+          <div class="columns medium-4 small-6"><span>CONTACT</span><hr>hey man hit me up for all the latest wellington clubbing hotspots, 0800-30-40-50</div>
+          <div class="columns medium-4 small-6"><span>SOCIAL</span><hr><ul><li><a href="">Facebukk</a></li><li><a href="">Instagramz</a></li><li><a href="">Snapchit</a></li></ul></div>
+          <div class="columns medium-4 hide-for-small-only"><span>WORLD CLASS, LOCALLY</span><hr>if u lookin for that good good sweet christmas design then u gotta hit me up my man im telling you o.O</div>
+        </div>
       </div>
     </div>
 

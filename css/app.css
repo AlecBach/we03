@@ -15,7 +15,9 @@ body {
 
 .top-nav-bar {
   background-color: #303030;
-  border-bottom: 1px solid #4c4c4c; }
+  border-bottom: 1px solid #4c4c4c;
+  position: fixed;
+  top: 0; }
 
 .nav-text, .nav-header {
   color: #e4e5e5 !important;
@@ -54,15 +56,18 @@ body {
     margin-bottom: 0; }
 
 .burger-menu {
-  display: none; }
+  display: none;
+  position: fixed;
+  top: 53px; }
   .burger-menu ul li {
-    border-top: 1px solid #4c4c4c; }
+    border-bottom: 1px solid #4c4c4c; }
     .burger-menu ul li a {
       color: #e4e5e5;
       font-family: 'Montserrat';
       font-size: 1.1em;
       padding-left: 0.625rem;
-      padding-right: 0.625rem; }
+      padding-right: 0.625rem;
+      background-color: #303030; }
     @media screen and (min-width: 40em) {
       .burger-menu ul li a {
         padding-left: 0.9375rem;
@@ -85,14 +90,94 @@ body {
   .nav .nav-item:first-child {
     border-right: 1px solid #4c4c4c; }
 
+#footer {
+  background-color: #303030;
+  color: #e4e5e5; }
+  #footer span {
+    color: #fafafa;
+    font-family: 'Montserrat';
+    font-size: 1.2em; }
+
 .hero-image {
   background-image: url(http://placehold.it/800x400);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
-  .hero-image .home-hero-text {
-    font-size: 1.5em;
-    color: #303030;
-    line-height: 1.1em;
-    margin-top: 150px;
-    margin-bottom: 150px; }
+  .hero-image .home-hero-cont {
+    height: 400px; }
+    .hero-image .home-hero-cont .home-hero-text {
+      font-size: 1.5em;
+      color: #303030;
+      line-height: 1.1em; }
+
+.bump-for-nav {
+  margin-top: 53px; }
+
+.bump-small {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+
+.bump-medium {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+
+.bump-large {
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
+
+.padding-vert-med {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+
+.main span {
+  font-size: 1.6em; }
+
+.main:last-child {
+  margin-bottom: 0 !important; }
+
+hr {
+  max-width: 99999px;
+  margin: 0.5rem 0 0.75rem 0; }
+
+#latest-work {
+  background-image: url(../imgs/wellbrew_blur.jpg);
+  background-position: center;
+  background-size: cover; }
+  #latest-work > div {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: #e4e5e5;
+    z-index: 1; }
+    #latest-work > div > p {
+      margin-bottom: 3px; }
+      #latest-work > div > p > span {
+        color: #2ba6cb;
+        font-size: 1em; }
+
+#darken-clarity {
+  width: 100%;
+  height: 135px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  padding: 0 !important; }
+
+@media print, screen and (min-width: 40em) {
+  .hero-image > .home-hero-cont {
+    height: 475px; }
+
+  #latest-work > div {
+    padding-top: 120px;
+    padding-bottom: 120px; } }
+@media print, screen and (min-width: 75em) {
+  .hero-image > .home-hero-cont {
+    height: 550px; }
+
+  .xl-padding, .xl-padding-right {
+    padding-right: 50px; }
+
+  .xl-padding, .xl-padding-left {
+    padding-left: 50px; }
+
+  #latest-work > div {
+    padding-top: 180px;
+    padding-bottom: 180px; } }
