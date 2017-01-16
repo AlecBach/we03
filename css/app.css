@@ -125,16 +125,51 @@ body {
   margin-top: 4rem;
   margin-bottom: 4rem; }
 
+.padding-vert-med {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+
 .main span {
   font-size: 1.6em; }
+
+.main:last-child {
+  margin-bottom: 0 !important; }
 
 hr {
   max-width: 99999px;
   margin: 0.5rem 0 0.75rem 0; }
 
+#latest-work {
+  background-image: url(../imgs/wellbrew_blur.jpg);
+  background-position: center;
+  background-size: cover; }
+  #latest-work > div {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: white;
+    z-index: 1; }
+    #latest-work > div > hr {
+      color: white; }
+    #latest-work > div > p {
+      margin-bottom: 3px; }
+      #latest-work > div > p > span {
+        color: #2ba6cb;
+        font-size: 1em; }
+
+#darken-clarity {
+  width: 100%;
+  height: 135px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  padding: 0 !important; }
+
 @media print, screen and (min-width: 40em) {
   .hero-image > .home-hero-cont {
-    height: 475px; } }
+    height: 475px; }
+
+  #latest-work > div {
+    padding-top: 120px;
+    padding-bottom: 120px; } }
 @media print, screen and (min-width: 75em) {
   .hero-image > .home-hero-cont {
     height: 550px; }
@@ -143,4 +178,8 @@ hr {
     padding-right: 50px; }
 
   .xl-padding, .xl-padding-left {
-    padding-left: 50px; } }
+    padding-left: 50px; }
+
+  #latest-work > div {
+    padding-top: 180px;
+    padding-bottom: 180px; } }
