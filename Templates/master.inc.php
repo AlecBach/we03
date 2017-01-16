@@ -34,7 +34,7 @@
           
           
         </div>
-        
+        <div style="display: none;" id="pageId"><?= $page ?></div>
       <!-- </div> -->
     </div>
     <div class="bump-for-nav"></div>
@@ -50,38 +50,16 @@
       </ul>
     </div>
 
-    <?php $this->content() ?>
+    
     <div id="content">
-      <div class="hero-image row fullWidth">
-        <div class="columns small-offset-1 small-10 medium-offset-6 medium-5 home-hero-cont">
-          <div class="row home-hero-text xl-padding-right">
-            Welcome to my site. Feel free to explore my blog posts, check out my portfolio, learn about me, contact me or create an account!
-          </div>
-        </div>
-      </div>
-      <div class="row expanded main bump-medium">
-        <div class="columns medium-offset-1 medium-10 xl-padding">
-          <span>Hiya!</span><hr>I am a web specialist based in the capital of New Zealand, Wellington. I can provide front end design and server side programming. On this site I have many sites that I have already completed,  my blog where I post irregularly about my opinions &amp; random stuff and a small page dedicated to information on me. Please dive in and enjoy the works you see!
-          <div class="row expanded bump-small">
-            <div class="columns small-12 medium-4">To read more about me and my journey through life, explore <a href="">here!</a></div><div class="columns small-12 medium-4">To see what I've been up to lately, take a look at my blog <a href="">here!</a></div><div class="columns small-12 medium-4">If you're bored of me already, You can check out my sites <a href="">here!</a></div>
-          </div>
-        </div>
-      </div>
-      <a href="http://we04.alec.bach.yoobee.net.nz/">
-        <div class="row expanded main bump-medium" id="latest-work">
-        <div id="darken-clarity"></div>
-         <div class="columns medium-offset-1 medium-10 xl-padding padding-vert-med">
-           <span>Latest work: WellyBrews</span><hr><p>This project was a test of my front end programming capabilities and problem solving. Incorporating some of the animations on the site was very challenging, and helped me learn a lot. As part of my Yoobee course, I was judged for my coding and visual aesthetic. View the site <span>here!</span></p>
-         </div>
-        </div>
-      </a>
+      <?php $this->content() ?>
     </div>
 
     <div class="row expanded" id="footer">
       <div class="columns medium-offset-1 medium-10 xl-padding">
         <div class="row expanded bump-large">
-          <div class="columns medium-4 small-6"><span>CONTACT</span><hr>hey man hit me up for all the latest wellington clubbing hotspots, 0800-30-40-50</div>
-          <div class="columns medium-4 small-6"><span>SOCIAL</span><hr><ul><li><a href="">Facebukk</a></li><li><a href="">Instagramz</a></li><li><a href="">Snapchit</a></li></ul></div>
+          <div class="columns medium-4 small-6"><span>CONTACT</span><hr>Contact me to arange a meeting where we will form an idea that will eventually grow in to a beautiful, fully functional website!<ul><li>Phone: <a href="tel:+64221964014">+6422 196 4014</a></li><li>Email: <a href="mailto:alec.bach97@gmail.com">alec.bach97@gmail.com</a></li></div>
+          <div class="columns medium-4 small-6"><span>SOCIAL</span><hr><ul><li><a href="https://www.facebook.com/alec.bach97">Facebook</a></li><li><a href="https://www.instagram.com/alec.bach/">Instagram</a></li></ul></div>
           <div class="columns medium-4 hide-for-small-only"><span>WORLD CLASS, LOCALLY</span><hr>if u lookin for that good good sweet christmas design then u gotta hit me up my man im telling you o.O</div>
         </div>
       </div>

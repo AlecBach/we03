@@ -10,6 +10,8 @@ var integerRemove = 50;
 var loggedIn = false;
 var totalWidth = 0;
 $(document).ready(function(){
+	var pageId = $("#pageId").html();
+	console.log()
 	$('.nav-item').each(function(i){
 		var width = $(this).outerWidth(true);
 		totalWidth += width;
@@ -23,28 +25,36 @@ $(document).ready(function(){
 	setNavBar();
 	removeWordsIfSmall();
 	positionLatestText();
+	sizing();
 	$(window).resize(function(){
 		positionHeroText();
 		setNavBar();
 		removeWordsIfSmall();
 		positionLatestText();
+		sizing();
 	})
 })
+function sizing(){
+	var header = $('.top-nav-bar').outerHeight();
+	var footer = $('#footer').outerHeight();
+	var windowH = $(window).innerHeight();
+	windowH = windowH - (header + footer);
+	console.log(header +" and "+footer+" and "+windowH);
+	$('#content').css({"min-height":windowH+"px"});
+}
 function positionLatestText(){
-	var parentHeight = $('#latest-work').innerHeight();
-	console.log("parentheight = "+parentHeight);
-	var	textHeight = parseInt($('#latest-work .padding-vert-med').css("padding-top").slice(0, -2)) * 2;
-	textHeight = $('#latest-work .padding-vert-med').innerHeight() - textHeight;
-	console.log(textHeight);
-	
-	var	divHeight = textHeight + 20;
-	var margin = parentHeight / 2 - textHeight / 2;
-	margin = margin - 10;
-	console.log("("+parentHeight+" / 2 = ?) - ("+textHeight+" / 2 = ?) = "+margin);
-	$('#darken-clarity').css({
-							"height":divHeight+"px",
-							"margin-top":margin+"px"
-							 })
+	if (pageId == "home") {
+		var parentHeight = $('#latest-work').innerHeight();
+		var	textHeight = parseInt($('#latest-work .padding-vert-med').css("padding-top").slice(0, -2)) * 2;
+		textHeight = $('#latest-work .padding-vert-med').innerHeight() - textHeight;
+		var	divHeight = textHeight + 20;
+		var margin = parentHeight / 2 - textHeight / 2;
+		margin = margin - 10;
+		$('#darken-clarity').css({
+								"height":divHeight+"px",
+								"margin-top":margin+"px"
+								 })
+	}
 }
 function removeWordsIfSmall(){
 	if ($('#footer .hide-for-small-only').innerWidth() < 272){

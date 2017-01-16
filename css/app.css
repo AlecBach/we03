@@ -17,7 +17,8 @@ body {
   background-color: #303030;
   border-bottom: 1px solid #4c4c4c;
   position: fixed;
-  top: 0; }
+  top: 0;
+  z-index: 5; }
 
 .nav-text, .nav-header {
   color: #e4e5e5 !important;
@@ -58,7 +59,8 @@ body {
 .burger-menu {
   display: none;
   position: fixed;
-  top: 53px; }
+  top: 53px;
+  z-index: 5; }
   .burger-menu ul li {
     border-bottom: 1px solid #4c4c4c; }
     .burger-menu ul li a {

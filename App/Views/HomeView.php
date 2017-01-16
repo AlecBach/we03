@@ -12,8 +12,7 @@ Class HomeView extends View
 
 	public function content(){
 		extract($this->data);
-		// turn back on when page is developed
-		// include "templates/home.inc.php";
+		include "templates/home.inc.php";
 	}
 }
 
