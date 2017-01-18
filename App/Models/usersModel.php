@@ -41,11 +41,16 @@ Class usersModel extends databaseModel
 
 		// Get the database connection
 		$db = $this->getDatabaseConnection();
-
+		$sql = "";
 		// Prepare the SQL
-		$sql = "INSERT INTO users (email, password, firstName, lastName, profileImage)
+		if (isset($_POST['profileImage'])) {
+			$sql = "INSERT INTO users (email, password, firstName, lastName, profileImage)
 				VALUES (:email, :password, :firstName, :lastName, :profileImage)";
-
+		}else{
+			$sql = "INSERT INTO users (email, password, firstName, lastName)
+				VALUES (:email, :password, :firstName, :lastName)";
+		};
+		
 		$statement = $db->prepare($sql);
 
 		// Bind the form data to the SQL query
@@ -53,6 +58,10 @@ Class usersModel extends databaseModel
 		$statement->bindValue(':password', $_POST['password']);
 		$statement->bindValue(':firstName', $_POST['firstName']);
 		$statement->bindValue(':lastName', $_POST['lastName']);
+		if (isset($_POST['profileImage'])) {
+			$statement->bindValue(':profileImage', ", "+$_POST['profileImage']);
+		};
+		var_dump($statement);
 
 		// Run the query
 		$result = $statement->execute();
