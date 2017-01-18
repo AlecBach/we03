@@ -209,6 +209,52 @@ hr {
 	position: absolute;
 	padding: 0 !important;
 }
+
+#loginForm, #registerForm{
+	//transition: margin-top 0.4s ease-in-out;
+	h2{
+		margin-bottom: 0;
+		text-align: center;
+		display: inline-block;
+	}
+	#registerLink{
+		float:right !important;
+		display: inline-block;
+		padding-top: 30px;
+		margin-top: 0;
+		color: #2ba6cb;
+		transition: color 0.25s ease-out;
+	}
+	#registerLink:hover{
+		color: #258dad;
+	}
+	label {
+		font-size: 1.4em;
+	}
+	#profileImageUploadText {
+		font-size: 0.9rem !important;
+		margin-top: 8px;
+	}
+	#keepLoggedIn {
+		margin: 0;
+	}
+	#keepLoggedInText{
+		font-size: 1em;
+		padding: 11px 0 16px 0;
+	}
+	input {
+		margin: 0.05rem 0 0.2rem !important;
+	}
+	#submitButton {
+		float:right;
+		margin-top: 8px;
+	}
+}
+.help-text {
+	margin: 0.5rem 0 0 !important;
+	display: none;
+	color: red;
+}
 @media print, screen and (min-width: 40em){
 	.hero-image > .home-hero-cont {
 		height: 475px;

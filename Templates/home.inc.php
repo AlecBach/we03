@@ -1,4 +1,3 @@
-<div style="display: none;" id="pageId">home</div>
 <div class="hero-image row fullWidth">
   <div class="columns small-offset-1 small-10 medium-offset-6 medium-5 home-hero-cont">
     <div class="row home-hero-text xl-padding-right">
@@ -14,7 +13,7 @@
     </div>
   </div>
 </div>
-<a href="http://we04.alec.bach.yoobee.net.nz/">
+<a href="http://we04.alec.bach.yoobee.net.nz/" target="_blank">
   <div class="row expanded main bump-medium" id="latest-work">
   <div id="darken-clarity"></div>
    <div class="columns medium-offset-1 medium-10 xl-padding padding-vert-med">
