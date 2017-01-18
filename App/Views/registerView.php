@@ -1,18 +1,16 @@
 <?php
-
 namespace App\Views;
 
-Class HomeView extends View 
+Class registerView extends View 
 {
 	public function render(){
-		$page="home";
-		$title = " - Home";
+		$page="register";
+		$title = "- Register new account";
 		include "templates/master.inc.php";
 	}
 
 	public function content(){
-		extract($this->data);
-		include "templates/home.inc.php";
+		include "templates/register.inc.php";
 	}
 }
 

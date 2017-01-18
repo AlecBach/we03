@@ -2,17 +2,17 @@
 
 namespace App\Views;
 
-Class HomeView extends View 
+Class LoginView extends View 
 {
 	public function render(){
-		$page="home";
-		$title = " - Home";
+		$page="login";
+		$title = " - Log in";
 		include "templates/master.inc.php";
 	}
 
 	public function content(){
 		extract($this->data);
-		include "templates/home.inc.php";
+		include "templates/login.inc.php";
 	}
 }
 

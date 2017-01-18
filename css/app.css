@@ -17,7 +17,8 @@ body {
   background-color: #303030;
   border-bottom: 1px solid #4c4c4c;
   position: fixed;
-  top: 0; }
+  top: 0;
+  z-index: 5; }
 
 .nav-text, .nav-header {
   color: #e4e5e5 !important;
@@ -58,7 +59,8 @@ body {
 .burger-menu {
   display: none;
   position: fixed;
-  top: 53px; }
+  top: 53px;
+  z-index: 5; }
   .burger-menu ul li {
     border-bottom: 1px solid #4c4c4c; }
     .burger-menu ul li a {
@@ -146,8 +148,10 @@ hr {
   #latest-work > div {
     padding-top: 80px;
     padding-bottom: 80px;
-    color: #e4e5e5;
+    color: white;
     z-index: 1; }
+    #latest-work > div > hr {
+      color: white; }
     #latest-work > div > p {
       margin-bottom: 3px; }
       #latest-work > div > p > span {
@@ -160,6 +164,40 @@ hr {
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   padding: 0 !important; }
+
+#loginForm h2, #registerForm h2 {
+  margin-bottom: 0;
+  text-align: center;
+  display: inline-block; }
+#loginForm #registerLink, #registerForm #registerLink {
+  float: right !important;
+  display: inline-block;
+  padding-top: 30px;
+  margin-top: 0;
+  color: #2ba6cb;
+  transition: color 0.25s ease-out; }
+#loginForm #registerLink:hover, #registerForm #registerLink:hover {
+  color: #258dad; }
+#loginForm label, #registerForm label {
+  font-size: 1.4em; }
+#loginForm #profileImageUploadText, #registerForm #profileImageUploadText {
+  font-size: 0.9rem !important;
+  margin-top: 8px; }
+#loginForm #keepLoggedIn, #registerForm #keepLoggedIn {
+  margin: 0; }
+#loginForm #keepLoggedInText, #registerForm #keepLoggedInText {
+  font-size: 1em;
+  padding: 11px 0 16px 0; }
+#loginForm input, #registerForm input {
+  margin: 0.05rem 0 0.2rem !important; }
+#loginForm #submitButton, #registerForm #submitButton {
+  float: right;
+  margin-top: 8px; }
+
+.help-text {
+  margin: 0.5rem 0 0 !important;
+  display: none;
+  color: red; }
 
 @media print, screen and (min-width: 40em) {
   .hero-image > .home-hero-cont {
