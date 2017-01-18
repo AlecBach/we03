@@ -64,7 +64,7 @@ Class registerController
 			$errors['firstName'] = 'Required';
 		} elseif( strlen($_POST['firstName']) > 50 ){
 			$errors['firstName'] = 'Must be 50 characters or less.';
-		} elseif( preg_match($namePattern, $_POST['firstName']) ){
+		} elseif( !preg_match($namePattern, $_POST['firstName']) ){
 			$errors['firstName'] = 'May only contain alphabetic characters.';
 		}
 
@@ -73,7 +73,7 @@ Class registerController
 			$errors['lastName'] = 'Required';
 		} elseif( strlen($_POST['lastName']) > 50 ){
 			$errors['lastName'] = 'Must be 50 characters or less.';
-		} elseif( preg_match($namePattern, $_POST['lastName']) ){
+		} elseif( !preg_match($namePattern, $_POST['lastName']) ){
 			$errors['lastName'] = 'May only contain alphabetic characters.';
 		}
 
