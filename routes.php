@@ -49,6 +49,12 @@ namespace App\Controllers;
       $controller->store();
       break;
 
+    case 'account':
+    
+      $controller = new accountController();
+      $controller->show();
+      break;
+
     default:
 
       $controller = new controller404();

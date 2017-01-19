@@ -91,9 +91,16 @@ Class registerController
 		$_POST['password'] = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
 		// Insert new user into database
-		$newUser = new usersModel();
-		$newUser->saveNewUser();
 
+		$newUser = new usersModel();
+		$destination = '';
+		if($_FILES['image']['error'] === UPLOAD_ERR_OK){
+			$destination = $newUser->saveImage($_FILES['image']['tmp_name']);
+			$newUser->saveNewUser($destination);
+		}else{
+			$destination = null;
+			$newUser->saveNewUser($destination);
+		}
 		// Log them in automatically (because we're nice)
 
 		// Redirect to account page

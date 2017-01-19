@@ -4,7 +4,7 @@
     <?php $lastName = isset($_POST['lastName']) ? $_POST['lastName'] : '' ?>
     <?php $email = isset($_POST['email']) ? $_POST['email'] : '' ?>
     <?php $emailConfirm = isset($_POST['emailConfirm']) ? $_POST['emailConfirm'] : '' ?>
-    <form id="loginForm" method="post" action="./?page=register.store"><!--  method="post" action="login.send" -->
+    <form id="loginForm" method="post" action="./?page=register.store" enctype="multipart/form-data">
       <h2>Register</h2><a href="./?page=login"><h6 id="registerLink">Log in</h6></a><hr>
       <label for="firstName">First name
         <input id="firstName" name="firstName" type="text" value="<?= $firstName ?>" placeholder="John" aria-describedby="firstNameHelpText">
@@ -33,7 +33,7 @@
       </label>
       <p class="help-text" id="passwordHelpText"><?= isset($this->data['password']) ? $this->data['password'] : '' ?></p>
       <label for="profileImageUpload" id="profileImageUploadText" class="button">Upload Profile Image (Optional)</label>
-      <input type="file" id="profileImageUpload" id="profileImage" class="show-for-sr">
+      <input type="file" name="image" id="profileImageUpload" id="profileImage" class="show-for-sr">
       <input type="submit" class="button" id="submitButton">
     </form>
   </div>

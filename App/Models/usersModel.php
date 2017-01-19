@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use PDO;
+use finfo;
+use Intervention\Image\ImageManagerStatic as Image;
 
 Class usersModel extends databaseModel
 {
@@ -37,13 +39,13 @@ Class usersModel extends databaseModel
 
 	}
 
-	public function saveNewUser() {
+	public function saveNewUser($destination) {
 
 		// Get the database connection
 		$db = $this->getDatabaseConnection();
 		$sql = "";
 		// Prepare the SQL
-		if (isset($_POST['profileImage'])) {
+		if (isset($_FILES['image'])) {
 			$sql = "INSERT INTO users (email, password, firstName, lastName, profileImage)
 				VALUES (:email, :password, :firstName, :lastName, :profileImage)";
 		}else{
@@ -58,8 +60,8 @@ Class usersModel extends databaseModel
 		$statement->bindValue(':password', $_POST['password']);
 		$statement->bindValue(':firstName', $_POST['firstName']);
 		$statement->bindValue(':lastName', $_POST['lastName']);
-		if (isset($_POST['profileImage'])) {
-			$statement->bindValue(':profileImage', ", "+$_POST['profileImage']);
+		if (isset($_FILES['image'])) {
+			$statement->bindValue(':profileImage', "{$destination}");
 		};
 		var_dump($statement);
 
@@ -131,6 +133,57 @@ Class usersModel extends databaseModel
 		}
 
 
+	}
+
+
+	public function saveImage($filename){
+
+		$finfo = new finfo(FILEINFO_MIME_TYPE);
+		$mimetype = $finfo->file($filename);
+
+		// Create all possible extensions
+		$extensions = [
+			'image/jpg' => '.jpg',
+			'image/png' => '.png',
+			'image/jpeg' => '.jpeg',
+			'image/gif' => '.gif',
+		];
+
+		// if mime type is present, then select appropriate extension for file.
+		if(isset($extensions[$mimetype])){
+			$extension = $extensions[$mimetype];
+		} else {
+			$extension = '.jpg';
+		}
+
+		// create filename
+		$newFilename = uniqid() . $extension;
+		
+		// to store the image file in database, give it to the object.
+		$this->image = $newFilename;
+
+		$folder = "imgs/users/{$_POST['email']}/";
+
+		if(! is_dir($folder)){
+			mkdir($folder, 0777, true);
+		}
+
+		$destination = $folder.$newFilename;
+		move_uploaded_file($filename, $destination);
+
+		$img = Image::make($destination);
+		$img->fit(500, 500);
+		$img->save($folder . $newFilename);
+
+		if (! is_dir("imgs/users/{$_POST['email']}/thumbnails/")){
+			mkdir("imgs/users/{$_POST['email']}/thumbnails/", 0777, true);
+		}
+
+		$img = Image::make($destination);
+		$img->fit(100, 100);
+		$img->save($folder . "thumbnails/" . $newFilename);
+
+		return $destination;
 	}
 
 
