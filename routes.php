@@ -18,6 +18,18 @@ namespace App\Controllers;
       $controller->show();
       break;
 
+    case 'login.send':
+
+      $controller = new loginController();
+      $controller->processLoginForm();
+      break;
+
+    case 'login.forgot':
+
+      $controller = new loginController();
+      $controller->showForgot();
+      break;
+
     case 'logout':
       unset($_SESSION['user_id']);
       unset($_SESSION['privilege']);
@@ -38,6 +50,7 @@ namespace App\Controllers;
       break;
 
     default:
+
       $controller = new controller404();
       $controller->show();
       break;

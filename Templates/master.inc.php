@@ -23,8 +23,8 @@
             </div>
           </div>
           <div class="float-right nav hide-for-small-only nav-text">
-              <div class="nav-item float-right <?php if($page === "login" || $page === "register" ):?>active<?php endif; ?>"><a href="./?page=login"><?php if(isset($_SESSION['email'])): ?>LOG OUT<?php else: ?>LOG IN<?php endif; ?></a></div>
-              <?php if(isset($_SESSION['email'])): ?><div class="nav-item float-right <?php if($page === "account"):?>active<?php endif; ?>"><a href="./?page=account">ACCOUNT</a></div><?php endif; ?>
+              <?php if(!isset($_SESSION['user_email'])): ?><div class="nav-item float-right <?php if($page === "login" || $page === "register" ):?>active<?php endif; ?>"><a href="./?page=login">LOG IN</a></div><?php else: ?><div class="nav-item float-right"><a href="./?page=logout">LOG OUT</a></div><?php endif; ?>
+              <?php if(isset($_SESSION['user_email'])): ?><div class="nav-item float-right <?php if($page === "account"):?>active<?php endif; ?>"><a href="./?page=account">ACCOUNT</a></div><?php endif; ?>
               <div class="nav-item float-right <?php if($page === "contact"):?>active<?php endif; ?>"><a href="./?page=contact">CONTACT</a></div>
               <div class="nav-item float-right <?php if($page === "portfolio"):?>active<?php endif; ?>"><a href="./?page=portfolio">PORTFOLIO</a></div>
               <div class="nav-item float-right <?php if($page === "about"):?>active<?php endif; ?>"><a href="./?page=about">ABOUT</a></div>

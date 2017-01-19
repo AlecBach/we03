@@ -168,6 +168,7 @@ hr {
 #loginForm h2, #registerForm h2 {
   margin-bottom: 0;
   text-align: center;
+  font-size: 2.5rem !important;
   display: inline-block; }
 #loginForm #registerLink, #registerForm #registerLink {
   float: right !important;
@@ -183,16 +184,15 @@ hr {
 #loginForm #profileImageUploadText, #registerForm #profileImageUploadText {
   font-size: 0.9rem !important;
   margin-top: 8px; }
-#loginForm #keepLoggedIn, #registerForm #keepLoggedIn {
-  margin: 0; }
-#loginForm #keepLoggedInText, #registerForm #keepLoggedInText {
+#loginForm #forgotPasswordText, #registerForm #forgotPasswordText {
   font-size: 1em;
+  display: inline-block;
   padding: 11px 0 16px 0; }
 #loginForm input, #registerForm input {
   margin: 0.05rem 0 0.2rem !important; }
 #loginForm #submitButton, #registerForm #submitButton {
   float: right;
-  margin-top: 8px; }
+  margin-top: 8px !important; }
 
 .help-text {
   margin: 0.5rem 0 0 !important;

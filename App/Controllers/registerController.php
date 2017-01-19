@@ -58,8 +58,6 @@ Class registerController
 		}
 
 		//firstName validation
-		var_dump($namePattern);
-		var_dump($_POST['firstName']);
 		if( strlen($_POST['firstName']) == 0 ){
 			$errors['firstName'] = 'Required';
 		} elseif( strlen($_POST['firstName']) > 50 ){

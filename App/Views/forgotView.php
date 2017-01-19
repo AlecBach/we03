@@ -2,17 +2,17 @@
 
 namespace App\Views;
 
-Class loginView extends View 
+Class forgotView extends View 
 {
 	public function render(){
-		$page="login";
-		$title = " - Log in";
+		$page="forgot";
+		$title = " - Recover Account";
 		include "templates/master.inc.php";
 	}
 
 	public function content(){
 		extract($this->data);
-		include "templates/login.inc.php";
+		include "templates/forgot.inc.php";
 	}
 }
 

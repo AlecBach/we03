@@ -52,21 +52,9 @@ function sizing(){
 function positioning() {
 	switch (pageId){
 		case 'login':
-			var	form = $('#loginForm');
-			formH = $(form).innerHeight();
-			var minFormH = formH + 20;
-			if (minFormH > windowH){
-				$('#content').css({"min-height":minFormH+"px"});
-				$(form).css({"margin-top": "40px","margin-bottom": "40px"});
-			}
-			var topMargin = windowH / 2 - formH / 2;
-			if (topMargin < 0) {}else {
-				$(form).css({"margin-top": topMargin+"px","margin-bottom": topMargin+"px"});
-				$(form).css({"transition": "margin-top 0.4s ease-in-out"});
-			}
-			break;
 		case 'register':
-			var	form = $('#registerForm');
+		case 'forgot':
+			var	form = $('#loginForm');
 			formH = $(form).innerHeight();
 			var minFormH = formH + 20;
 			if (minFormH > windowH){

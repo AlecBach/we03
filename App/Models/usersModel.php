@@ -92,7 +92,7 @@ Class usersModel extends databaseModel
 		$db = $this->getDatabaseConnection();
 
 		// Find the password of the user with a matching email
-		$sql = "SELECT id, password, privilege, email FROM users
+		$sql = "SELECT id, password, privilage, email FROM users
 				WHERE email = :email  ";
 
 		$statement = $db->prepare($sql);
@@ -113,10 +113,10 @@ Class usersModel extends databaseModel
 			if( $result == true ) {
 				// Log the user in and redirect to account page
 				$_SESSION['user_id'] = $record['id'];
-				$_SESSION['privilege'] = $record['privilege'];
+				$_SESSION['privilage'] = $record['privilage'];
 				$_SESSION['user_email'] = $record['email'];
 
-				header('Location: index.php?page=account');
+				header('Location: ./?page=account');
 			} else {
 				// Bad password, return false so user sees error message
 				return false;
