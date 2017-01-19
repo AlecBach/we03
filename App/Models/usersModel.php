@@ -45,7 +45,7 @@ Class usersModel extends databaseModel
 		$db = $this->getDatabaseConnection();
 		$sql = "";
 		// Prepare the SQL
-		if (isset($_FILES['image'])) {
+		if (isset($destination)) {
 			$sql = "INSERT INTO users (email, password, firstName, lastName, profileImage)
 				VALUES (:email, :password, :firstName, :lastName, :profileImage)";
 		}else{
@@ -60,7 +60,7 @@ Class usersModel extends databaseModel
 		$statement->bindValue(':password', $_POST['password']);
 		$statement->bindValue(':firstName', $_POST['firstName']);
 		$statement->bindValue(':lastName', $_POST['lastName']);
-		if (isset($_FILES['image'])) {
+		if (isset($destination)) {
 			$statement->bindValue(':profileImage', "{$destination}");
 		};
 		var_dump($statement);
