@@ -14,8 +14,14 @@ namespace App\Controllers;
 
     case 'login':
 
-      $controller = new loginController();
-      $controller->show();
+      if(!isset($_SESSION['user_email'])){
+        $controller = new loginController();
+        $controller->show();
+      }else{
+        $controller = new logoutController();
+        $controller->show();
+      }
+
       break;
 
     case 'login.send':

@@ -46,8 +46,8 @@
         <li<?php if($page === "about"):?> class="active" <?php endif; ?>><a href="./?page=about">ABOUT</a></li>
         <li<?php if($page === "portfolio"):?> class="active" <?php endif; ?>><a href="./?page=portfolio">PORTFOLIO</a></li>
         <li<?php if($page === "contact"):?> class="active" <?php endif; ?>><a href="./?page=contact">CONTACT</a></li>
-        <?php if(isset($_SESSION['email'])): ?><li<?php if($page === "account"):?> class="active" <?php endif; ?>><a href="./?page=account">ACCOUNT</a></li><?php endif; ?>
-        <li><a href="./?page=login"><?php if(isset($_SESSION['email'])): ?>LOG OUT<?php else: ?>LOG IN<?php endif; ?></a></li>
+        <?php if(isset($_SESSION['user_email'])): ?><li<?php if($page === "account"):?> class="active" <?php endif; ?>><a href="./?page=account">ACCOUNT</a></li><?php endif; ?>
+        <?php if(!isset($_SESSION['user_email'])): ?><li><a href="./?page=login">LOG IN</a></li><?php else: ?><li><a href="./?page=logout">LOG OUT</a></li><?php endif; ?>
       </ul>
     </div>
 
