@@ -25,7 +25,7 @@ $(document).ready(function(){
 	} else{
 		loggedIn = true;
 	};
-	sizing();
+	contentSizing();
 	positioning();
 	positionHeroText();
 	setNavBar();
@@ -33,7 +33,7 @@ $(document).ready(function(){
 	positionLatestText();
 	slideErrorText()
 	$(window).resize(function(){
-		sizing();
+		contentSizing();
 		positioning();
 		positionHeroText();
 		setNavBar();
@@ -42,12 +42,15 @@ $(document).ready(function(){
 		slideErrorText()
 	})
 })
-function sizing(){
-	var header = $('.top-nav-bar').outerHeight();
+function contentSizing(){
+	// var header = $('.top-nav-bar').outerHeight();
+	var header = 53;
 	var footer = $('#footer').outerHeight();
 	windowH = $(window).innerHeight();
+	var oldH = windowH;
 	windowH = windowH - (header + footer);
 	$('#content').css({"min-height":windowH+"px"});
+	console.log(oldH+" - ( "+header+" + "+footer+" ) = "+windowH);
 }
 function positioning() {
 	switch (pageId){
@@ -63,7 +66,7 @@ function positioning() {
 				$(form).css({"margin-top": "40px","margin-bottom": "40px"});
 			}
 			var topMargin = windowH / 2 - formH / 2;
-			if (topMargin < 0) {}else {
+			if (topMargin < 40) {}else {
 				$(form).css({"margin-top": topMargin+"px","margin-bottom": topMargin+"px"});
 				$(form).css({"transition": "margin-top 0.4s ease-in-out"});
 			}

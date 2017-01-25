@@ -219,6 +219,7 @@ hr {
 }
 .account {
 	.settings{
+
 		a{
 			width: 33.333%;
 			text-align: center;
@@ -227,8 +228,8 @@ hr {
 			border-right: none;
 			border-top: none;
 		}
-		a:last-child{
-			border-right: 1px solid $darkGrey;
+		a:first-child{
+			border-left: none;
 		}
 	}
 	.top-sml{
@@ -236,6 +237,7 @@ hr {
 		height: 100%;
 		background-color: $lighterGrey;
 		padding: 20px 30px;
+
 		//border-radius: 30px 30px 0 0; 
 		border-bottom: 1px solid $darkGrey;
 		img {
@@ -248,7 +250,7 @@ hr {
 		height: 100%;
 		background-color: $lighterGrey;
 		padding: 40px;
-		margin-top: 4rem;
+		
 		border-radius: 40px 40px 0 0; 
 		border: 1px solid $darkGrey;
 		.textBlock {
@@ -272,6 +274,7 @@ hr {
 		}
 	}
 	.top-med{
+		margin-top: 2.5rem;
 		#emailText{
 			margin-top: -7px;
 		}
@@ -283,6 +286,7 @@ hr {
 		}
 	}
 	.top-lrg{
+		margin-top: 4rem;
 		#emailText{
 			margin-top: -10px;
 		}
@@ -341,6 +345,7 @@ hr {
 	display: none;
 	color: red;
 }
+//Medium & up
 @media print, screen and (min-width: 40em){
 	.hero-image > .home-hero-cont {
 		height: 475px;
@@ -349,7 +354,34 @@ hr {
 		padding-top: 120px;
 		padding-bottom: 120px;
 	}
+	.account {
+		.settings{
+			padding-bottom: 2.5em;
+			a{
+				width: 33.333%;
+				text-align: center;
+				background-color: $lighterGrey;
+				border: 1px solid $darkGrey;
+				border-right: none;
+				border-top: none;
+			}
+			a:last-child{
+				border-right: 1px solid $darkGrey;
+			}
+			a:first-child{
+				border-left: 1px solid $darkGrey;
+			}
+		}
+	}
 }
+//Large & up
+@media print, screen and (min-width: 64em){
+	.account {
+		.settings{
+			padding-bottom: 4em;
+		}
+	}
+}	
 @media print, screen and (min-width: 75em){
 	.hero-image > .home-hero-cont {
 		height: 550px;

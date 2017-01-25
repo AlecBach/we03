@@ -12,9 +12,9 @@ Class usersModel extends databaseModel
 	protected static $columns = [
 		'email' ,
 		'password',
-		'first_name',
-		'last_name',
-		'profile_image'
+		'firstName',
+		'lastName',
+		'profileImage'
 	];
 
 	// Return true if E-Mail exists

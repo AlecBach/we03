@@ -26,14 +26,24 @@ namespace App\Controllers;
 
     case 'login.send':
 
-      $controller = new loginController();
-      $controller->processLoginForm();
+      if(!isset($_SESSION['user_email'])){
+        $controller = new loginController();
+        $controller->processLoginForm();
+      }else{
+        $controller = new logoutController();
+        $controller->show();
+      }
       break;
 
     case 'login.forgot':
 
-      $controller = new loginController();
-      $controller->showForgot();
+      if(!isset($_SESSION['user_email'])){
+        $controller = new loginController();
+        $controller->showForgot();
+      }else{
+        $controller = new logoutController();
+        $controller->show();
+      }
       break;
 
     case 'logout':
@@ -45,14 +55,24 @@ namespace App\Controllers;
 
     case 'register':
 
-      $controller = new registerController();
-      $controller->show();
+      if(!isset($_SESSION['user_email'])){
+        $controller = new registerController();
+        $controller->show();
+      }else{
+        $controller = new logoutController();
+        $controller->show();
+      } 
       break;
 
     case 'register.store':
-    
-      $controller = new registerController();
-      $controller->store();
+      
+      if(!isset($_SESSION['user_email'])){
+        $controller = new registerController();
+        $controller->store();
+      }else{
+        $controller = new logoutController();
+        $controller->show();
+      }
       break;
 
     case 'account':
