@@ -76,9 +76,13 @@ namespace App\Controllers;
       break;
 
     case 'account':
-    
-      $controller = new accountController();
-      $controller->show();
+
+      if (isset($_GET['id'])) {
+        $controller = new accountController();
+        $controller->show();
+      }else{
+        header("Location: ./?page=account&id={$_SESSION['user_id']}");
+      }
       break;
 
     default:

@@ -24,7 +24,7 @@
           </div>
           <div class="float-right nav hide-for-small-only nav-text">
               <?php if(!isset($_SESSION['user_email'])): ?><div class="nav-item float-right <?php if($page === "login" || $page === "register" ):?>active<?php endif; ?>"><a href="./?page=login">LOG IN</a></div><?php else: ?><div class="nav-item float-right"><a href="./?page=logout">LOG OUT</a></div><?php endif; ?>
-              <?php if(isset($_SESSION['user_email'])): ?><div class="nav-item float-right <?php if($page === "account"):?>active<?php endif; ?>"><a href="./?page=account">ACCOUNT</a></div><?php endif; ?>
+              <?php if(isset($_SESSION['user_email'])): ?><div class="nav-item float-right <?php if($page === "account" && $_GET['id'] === $_SESSION['user_id']):?>active<?php endif; ?>"><a href="./?page=account&?id=<?=$_SESSION['user_id']?>">ACCOUNT</a></div><?php endif; ?>
               <div class="nav-item float-right <?php if($page === "contact"):?>active<?php endif; ?>"><a href="./?page=contact">CONTACT</a></div>
               <div class="nav-item float-right <?php if($page === "portfolio"):?>active<?php endif; ?>"><a href="./?page=portfolio">PORTFOLIO</a></div>
               <div class="nav-item float-right <?php if($page === "about"):?>active<?php endif; ?>"><a href="./?page=about">ABOUT</a></div>
@@ -46,7 +46,7 @@
         <li<?php if($page === "about"):?> class="active" <?php endif; ?>><a href="./?page=about">ABOUT</a></li>
         <li<?php if($page === "portfolio"):?> class="active" <?php endif; ?>><a href="./?page=portfolio">PORTFOLIO</a></li>
         <li<?php if($page === "contact"):?> class="active" <?php endif; ?>><a href="./?page=contact">CONTACT</a></li>
-        <?php if(isset($_SESSION['user_email'])): ?><li<?php if($page === "account"):?> class="active" <?php endif; ?>><a href="./?page=account">ACCOUNT</a></li><?php endif; ?>
+        <?php if(isset($_SESSION['user_email'])): ?><li<?php if($page === "account" && $_GET['id'] === $_SESSION['user_id']):?> class="active" <?php endif; ?>><a href="./?page=account&?id=<?=$_SESSION['user_id']?>">ACCOUNT</a></li><?php endif; ?>
         <?php if(!isset($_SESSION['user_email'])): ?><li><a href="./?page=login">LOG IN</a></li><?php else: ?><li><a href="./?page=logout">LOG OUT</a></li><?php endif; ?>
       </ul>
     </div>

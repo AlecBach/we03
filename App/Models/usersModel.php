@@ -75,6 +75,9 @@ Class usersModel extends databaseModel
 			$_SESSION['user_id'] = $db->lastInsertId();
 			$_SESSION['user_email']= $_POST['email'];
 			$_SESSION['privilege'] = 'user';
+			// if (isset($destination)) {
+			// 	$_SESSION['user_image'] = $destination;
+			// };
 
 			header('Location: index.php?page=account');
 		} else {
@@ -94,7 +97,7 @@ Class usersModel extends databaseModel
 		$db = $this->getDatabaseConnection();
 
 		// Find the password of the user with a matching email
-		$sql = "SELECT id, password, privilage, email FROM users
+		$sql = "SELECT id, password, privilage, email, profileImage FROM users
 				WHERE email = :email  ";
 
 		$statement = $db->prepare($sql);
@@ -117,6 +120,8 @@ Class usersModel extends databaseModel
 				$_SESSION['user_id'] = $record['id'];
 				$_SESSION['privilage'] = $record['privilage'];
 				$_SESSION['user_email'] = $record['email'];
+				//$_SESSION['user_image'] = $record['profileImage'];
+
 
 				header('Location: ./?page=account');
 			} else {

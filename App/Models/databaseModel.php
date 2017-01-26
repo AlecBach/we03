@@ -67,25 +67,25 @@ abstract Class databaseModel
 
 	// }
 
-	// public function find($id){
+	public function find($id){
 
-	// 	// $id = isset($_GET['id']) ? $_GET['id'] : null;
+		// $id = isset($_GET['id']) ? $_GET['id'] : null;
 
-	// 	$db = $this->getDatabaseConnection();
+		$db = $this->getDatabaseConnection();
 
-	// 	$sql = "SELECT ". implode(',', static::$columns). " FROM ". static::$tablename ." WHERE id=:id";
+		$sql = "SELECT ". implode(',', static::$columns). " FROM ". static::$tablename ." WHERE id=:id";
 
-	// 	$statement = $db->prepare($sql);
+		$statement = $db->prepare($sql);
 
-	// 	$statement->bindValue(':id', $id);
+		$statement->bindValue(':id', $id);
 
-	// 	$result = $statement->execute();
+		$result = $statement->execute();
 
-	// 	$record = $statement->fetch(PDO::FETCH_ASSOC);
+		$record = $statement->fetch(PDO::FETCH_ASSOC);
+		
+		return $record;
 
-	// 	return $record;
-
-	// }
+	}
 	// public function save(){
 
 	// 	$db = $this->getDatabaseConnection();
