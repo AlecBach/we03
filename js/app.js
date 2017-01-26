@@ -15,7 +15,7 @@ var formH = 0;
 
 $(document).ready(function(){
 	pageId = $("#pageId").text();
-	console.log(pageId);
+	console.log("We are on the "+pageId+" page.");
 	$('.nav-item').each(function(i){
 		var width = $(this).outerWidth(true);
 		totalWidth += width;
@@ -32,6 +32,9 @@ $(document).ready(function(){
 	removeWordsIfSmall();
 	positionLatestText();
 	slideErrorText()
+	setTimeout(function () {
+	    contentSizing();
+	}, 500);
 	$(window).resize(function(){
 		contentSizing();
 		positioning();
@@ -40,6 +43,9 @@ $(document).ready(function(){
 		removeWordsIfSmall();
 		positionLatestText();
 		slideErrorText()
+		setTimeout(function () {
+	        contentSizing();
+	    }, 500);
 	})
 })
 function contentSizing(){
@@ -50,7 +56,8 @@ function contentSizing(){
 	var oldH = windowH;
 	windowH = windowH - (header + footer);
 	$('#content').css({"min-height":windowH+"px"});
-	console.log(oldH+" - ( "+header+" + "+footer+" ) = "+windowH);
+	// console.log(oldH+" - ( "+header+" + "+footer+" ) = "+windowH);
+
 }
 function positioning() {
 	switch (pageId){
@@ -72,7 +79,7 @@ function positioning() {
 			}
 			break;
 		case 'account':
-			console.log("hello");
+			// console.log("hello");
 			$('.centerText').each(function(){
 				verticleCenter(this);
 			});
@@ -82,7 +89,7 @@ function positioning() {
 function verticleCenter(child){
 	var childHeight = $(child).innerHeight();
 	var parentHeight = $(child).parent().innerHeight();
-	console.log(childHeight+" --- "+parentHeight);
+	// console.log(childHeight+" --- "+parentHeight);
 	var margin = parentHeight / 2 - childHeight / 2;
 	$(child).css({"margin-top": margin+"px", "margin-bottom": margin+"px"});
 }
@@ -91,27 +98,27 @@ function positionOnSlide() {
 		case 'login':
 			var	form = $('#loginForm');
 			formH = $(form).innerHeight();
-			console.log($('#emailHelpText').css("display"));
+			// console.log($('#emailHelpText').css("display"));
 			var adjustment = 0;
 			if ($('#emailHelpText').css("display") === "none"){
 				adjustment += 28;
-				console.log("2");
-				console.log("email text is present= " + adjustment);
+				// console.log("2");
+				// console.log("email text is present= " + adjustment);
 			}else{
 				adjustment -= 28;
 			};
 			if ($('#passwordHelpText').css("display") === "none"){
 				adjustment += 28;
-				console.log("3");
-				console.log("password text is present= " + adjustment);
+				// console.log("3");
+				// console.log("password text is present= " + adjustment);
 			}else{
 				adjustment -= 28;
 			};
 			formH += adjustment;
 			var topMargin = windowH / 2 - formH / 2;
-			console.log("4");
+			// console.log("4");
 			if (topMargin < 0) {}else {
-				console.log("5");
+				// console.log("5");
 				$(form).css({"margin-top": topMargin+"px"});
 				$(form).css({"transition": "margin-top 0.8s ease-in-out"});
 			};
@@ -177,7 +184,7 @@ function positionHeroText(){
 	var	textOffset = $(textBox).outerHeight() / 2;
 	var	contMiddle = $('.home-hero-cont').outerHeight() / 2;
 	var margin = contMiddle - textOffset;
-	//console.log("(" + $(textBox).outerHeight() + " / 2 = " + textOffset + ") - (" + $('.home-hero-cont').outerHeight() + " / 2 = " + contMiddle + ") = " + margin);
+	// console.log("(" + $(textBox).outerHeight() + " / 2 = " + textOffset + ") - (" + $('.home-hero-cont').outerHeight() + " / 2 = " + contMiddle + ") = " + margin);
 	$(textBox).css({"margin-top": margin+"px"});
 }
 

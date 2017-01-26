@@ -117,7 +117,8 @@ body{
 	}
 }
 #footer {
-	background-color: $darkerGrey;
+	//background-color: $darkerGrey;
+	background-image: url(../imgs/backgrounds/footer_lodyas.png);
 	color: $lighterGrey;
 	//height: 300px;
 	span {
@@ -217,7 +218,22 @@ hr {
 	height: 200px;
 	width: 200px;
 }
+.accountBg{
+	background-image: url(../imgs/backgrounds/light_grey.png);
+	background-size: 46px 23px;
+}
 .account {
+	.posts{
+		background-color: white;
+		border-top: 1px solid $darkGrey;
+		#noPosts{
+			width: 100%;
+			display: block;
+			text-align: center;
+			margin: 0;
+			padding: 30px;
+		}
+	}
 	.settings{
 
 		a{
@@ -226,7 +242,8 @@ hr {
 			background-color: $lighterGrey;
 			border: 1px solid $darkGrey;
 			border-right: none;
-			border-top: none;
+			//border-top: none;
+			border-bottom: none;
 		}
 		a:first-child{
 			border-left: none;
@@ -235,24 +252,41 @@ hr {
 	.top-sml{
 		width: 100%;
 		height: 100%;
-		background-color: $lighterGrey;
+		background-color: white;
 		padding: 20px 30px;
 
 		//border-radius: 30px 30px 0 0; 
-		border-bottom: 1px solid $darkGrey;
+		//border-bottom: 1px solid $darkGrey;
 		img {
 			display: block;
 			margin: 0 auto;
+		}
+		.textCont{
+			width: 100%;
+			padding-top: 20px;
+			#nameText, #emailText, #statsText {
+				text-align: center;
+			}
+			#emailText{
+				margin-top: -11px;
+			}
+			#nameText{
+				//margin-top: 92px;
+			}
+			#statsText{
+				margin-top: -7px;
+				margin-bottom: 0px;
+			}
 		}
 	}
 	.top-med, .top-lrg{
 		width: 100%;
 		height: 100%;
-		background-color: $lighterGrey;
+		background-color: white;
 		padding: 40px;
 		
-		border-radius: 40px 40px 0 0; 
-		border: 1px solid $darkGrey;
+		//border-radius: 40px 40px 0 0; 
+		//border: 1px solid $darkGrey;
 		.textBlock {
 			width: 100%;
 		}
@@ -274,7 +308,7 @@ hr {
 		}
 	}
 	.top-med{
-		margin-top: 2.5rem;
+		//margin-top: 2.5rem;
 		#emailText{
 			margin-top: -7px;
 		}
@@ -286,7 +320,7 @@ hr {
 		}
 	}
 	.top-lrg{
-		margin-top: 4rem;
+		//margin-top: 4rem;
 		#emailText{
 			margin-top: -10px;
 		}
@@ -355,31 +389,36 @@ hr {
 		padding-bottom: 120px;
 	}
 	.account {
+		margin-top: 2.5em;
+		margin-bottom: 2.5em;
+		.posts{
+			// border: 1px solid $darkGrey;
+			// border-bottom: none;
+		}
 		.settings{
-			padding-bottom: 2.5em;
+			//padding-bottom: 2.5em;
 			a{
 				width: 33.333%;
 				text-align: center;
 				background-color: $lighterGrey;
 				border: 1px solid $darkGrey;
 				border-right: none;
-				border-top: none;
+				border-bottom: none;
 			}
-			a:last-child{
-				border-right: 1px solid $darkGrey;
-			}
-			a:first-child{
-				border-left: 1px solid $darkGrey;
-			}
+			// a:last-child{
+			// 	border-right: 1px solid $darkGrey;
+			// }
+			// a:first-child{
+			// 	border-left: 1px solid $darkGrey;
+			// }
 		}
 	}
 }
 //Large & up
 @media print, screen and (min-width: 64em){
 	.account {
-		.settings{
-			padding-bottom: 4em;
-		}
+		margin-top: 4em;
+		margin-bottom: 4em;
 	}
 }	
 @media print, screen and (min-width: 75em){

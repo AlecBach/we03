@@ -52,7 +52,7 @@
     </div>
 
     
-    <div id="content">
+    <div id="content" class="<?=$page?>Bg">
       <?php $this->content() ?>
     </div>
 

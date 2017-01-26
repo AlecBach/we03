@@ -13,7 +13,9 @@ Class userInfoModel extends databaseModel
 		'email' ,
 		'firstName',
 		'lastName',
-		'profileImage'
+		'profileImage',
+		'dateCreated',
+		'privilage'
 	];
 }
 
