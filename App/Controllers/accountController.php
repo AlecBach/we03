@@ -14,10 +14,8 @@ Class accountController
 	  $user = $model->find($_GET['id']);
 
 	  if(isset($user['dateCreated'])){
-	  	echo "date is present";
 	  	$user['dateCreated'] = date("m/d/Y", strtotime($user['dateCreated']));
 	  };
-	  var_dump($user['dateCreated']);
 
       $view = new accountView(compact('user'));
       $view->render();

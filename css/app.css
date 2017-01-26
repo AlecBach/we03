@@ -141,6 +141,12 @@ hr {
   max-width: 99999px;
   margin: 0.5rem 0 0.75rem 0; }
 
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */ }
+
 #latest-work {
   background-image: url(../imgs/wellbrew_blur.jpg);
   background-position: center;
@@ -165,14 +171,6 @@ hr {
   position: absolute;
   padding: 0 !important; }
 
-.avatar {
-  border-radius: 50%;
-  border: 1px solid #4c4c4c; }
-
-.avatar200 {
-  height: 200px;
-  width: 200px; }
-
 .accountBg {
   background-image: url(../imgs/backgrounds/light_grey.png);
   background-size: 46px 23px; }
@@ -195,11 +193,18 @@ hr {
   border-bottom: none; }
 .account .settings a:first-child {
   border-left: none; }
+.account .imgCont {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px; }
 .account .top-sml {
   width: 100%;
   height: 100%;
   background-color: white;
   padding: 20px 30px; }
+  .account .top-sml .imgCont {
+    margin: 0 auto; }
   .account .top-sml img {
     display: block;
     margin: 0 auto; }
