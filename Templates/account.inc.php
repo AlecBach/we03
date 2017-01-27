@@ -39,7 +39,7 @@
 		</div>
 		<?if($_GET['id'] == $_SESSION['user_id']):?>
 		<div class="row expanded settings">
-			<a href="./page=account.edit">Edit information</a>
+			<a href="./?page=account.edit">Edit information</a>
 			<a href="">Change password</a>
 			<a data-open="exampleModal1">Delete Account</a>
 

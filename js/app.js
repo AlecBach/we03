@@ -65,20 +65,27 @@ function positioning() {
 		case 'register':
 		case 'forceLogin':
 		case 'deleteAccount':
+		case 'editAccount':
 		case 'logout':
 		case 'forgot':
 			var	form = $('#loginForm');
 			formH = $(form).innerHeight();
 			var minFormH = formH + 20;
+			console.log('in function');
 			if (minFormH > windowH){
 				$('#content').css({"min-height":minFormH+"px"});
 				$(form).css({"margin-top": "40px","margin-bottom": "40px"});
 			}
 			var topMargin = windowH / 2 - formH / 2;
-			if (topMargin < 40) {}else {
+			console.log(topMargin);
+			if (topMargin < 40) {
+				$(form).css({"margin-top": "40px","margin-bottom": "40px"});
+				$(form).css({"transition": "margin-top 0.4s ease-in-out"});
+			}else {
 				$(form).css({"margin-top": topMargin+"px","margin-bottom": topMargin+"px"});
 				$(form).css({"transition": "margin-top 0.4s ease-in-out"});
 			}
+			console.log('end function');
 			break;
 		case 'account':
 			// console.log("hello");

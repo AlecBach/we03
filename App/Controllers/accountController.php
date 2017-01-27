@@ -27,9 +27,22 @@ Class accountController
 	public function edit(){
 
 	  $model = new userInfoModel();
-	  $user = $model->find($_GET['id']);
+	  $user = $model->find($_SESSION['user_id']);
 
 	  $view = new editAccountView(compact('user'));
+      $view->render();
+	}
+	public function processEdit(){
+
+	  $model = new userInfoModel();
+	  $user = $model->find($_SESSION['user_id']);
+
+	  $model = new usersModel();
+	  $result = $model->editUser();
+
+	  $error['the-error']='Wrong password.';
+
+	  $view = new editAccountView(compact('error user'));
       $view->render();
 	}
 

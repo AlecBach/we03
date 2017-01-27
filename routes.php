@@ -100,6 +100,17 @@ namespace App\Controllers;
       }
       break;
 
+    case 'account.edit.try':
+
+      if(isset($_SESSION['user_email'])){
+        $controller = new accountController();
+        $controller->processEdit();
+      }else{
+        $controller = new logoutController();
+        $controller->showLogin();
+      }
+      break;
+
     case 'account.delete':
 
       if(isset($_SESSION['user_email'])){
