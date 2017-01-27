@@ -117,38 +117,38 @@ abstract Class databaseModel
 	// 	$this->id = $db->lastInsertId();
 
 	// }
-	// public function update(){
+	public function update(){
 
-	// 	// get database connection
-	// 	$db = $this->getDatabaseConnection();
+		// get database connection
+		$db = $this->getDatabaseConnection();
 
-	// 	// unset id field
-	// 	$columns = static::$columns;
-	// 	unset($columns[array_search('id', $columns)]);
+		// unset id field
+		$columns = static::$columns;
+		unset($columns[array_search('id', $columns)]);
 
-	// 	// write query UPDATE
-	// 	$sql= "UPDATE " . static::$tablename . " SET ";
+		// write query UPDATE
+		$sql= "UPDATE " . static::$tablename . " SET ";
 
-	// 	$updatecols = [];
+		$updatecols = [];
 
-	// 	foreach ($columns as $column) {
-	// 		array_push($updatecols, $column . "=:" .$column);
-	// 	}
+		foreach ($columns as $column) {
+			array_push($updatecols, $column . "=:" .$column);
+		}
 
-	// 	$sql .= implode(',', $updatecols) . " WHERE id=:id";
+		$sql .= implode(',', $updatecols) . " WHERE id=:id";
 
-	// 	// prepare statement
-	// 	$statement = $db->prepare($sql);
+		// prepare statement
+		$statement = $db->prepare($sql);
 
-	// 	// bind value for place holders
-	// 	foreach (static::$columns as $column) {
-	// 		$statement->bindValue(":".$column, $this->$column);
-	// 	}
+		// bind value for place holders
+		foreach (static::$columns as $column) {
+			$statement->bindValue(":".$column, $this->$column);
+		}
 
-	// 	// execute
-	// 	$statement->execute();
+		// execute
+		$statement->execute();
 
-	// }
+	}
 
 	// public static function destroy($id){
 	// 	$db = self::getDatabaseConnection();
