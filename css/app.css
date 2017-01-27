@@ -89,6 +89,12 @@ body {
       font-family: 'Montserrat';
       font-size: 1.1em;
       line-height: 52px; }
+    .nav .nav-item #accountItem {
+      display: inline-block;
+      vertical-align: top; }
+    .nav .nav-item img {
+      max-width: 45px;
+      height: auto; }
   .nav .nav-item:first-child {
     border-right: 1px solid #4c4c4c; }
 
@@ -147,6 +153,20 @@ img {
   width: auto\9;
   /* ie8 */ }
 
+#finalDeleteWarning {
+  color: red;
+  display: inline-block;
+  margin-top: 17px;
+  margin-bottom: 0; }
+
+.redText {
+  color: red; }
+  .redText a {
+    color: red !important;
+    transition: color 0.4s ease-in-out; }
+  .redText a:hover {
+    color: darkred !important; }
+
 #latest-work {
   background-image: url(../imgs/wellbrew_blur.jpg);
   background-position: center;
@@ -170,6 +190,18 @@ img {
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   padding: 0 !important; }
+
+.thumbCont {
+  overflow: hidden;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 5px; }
+  .thumbCont img {
+    max-width: 100%;
+    height: auto; }
 
 .accountBg {
   background-image: url(../imgs/backgrounds/light_grey.png);
@@ -198,6 +230,9 @@ img {
   border-radius: 50%;
   width: 200px;
   height: 200px; }
+  .account .imgCont img {
+    width: 100% !important;
+    height: auto !important; }
 .account .top-sml {
   width: 100%;
   height: 100%;

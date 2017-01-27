@@ -19,7 +19,7 @@ namespace App\Controllers;
         $controller->show();
       }else{
         $controller = new logoutController();
-        $controller->show();
+        $controller->showLogout();
       }
 
       break;
@@ -31,7 +31,7 @@ namespace App\Controllers;
         $controller->processLoginForm();
       }else{
         $controller = new logoutController();
-        $controller->show();
+        $controller->showLogout();
       }
       break;
 
@@ -42,14 +42,13 @@ namespace App\Controllers;
         $controller->showForgot();
       }else{
         $controller = new logoutController();
-        $controller->show();
+        $controller->showLogout();
       }
       break;
 
     case 'logout':
-      unset($_SESSION['user_id']);
-      unset($_SESSION['privilege']);
-      unset($_SESSION['user_email']);
+
+      session_destroy();
       header('Location: index.php');
       break;
 
@@ -60,7 +59,7 @@ namespace App\Controllers;
         $controller->show();
       }else{
         $controller = new logoutController();
-        $controller->show();
+        $controller->showLogout();
       } 
       break;
 
@@ -71,17 +70,55 @@ namespace App\Controllers;
         $controller->store();
       }else{
         $controller = new logoutController();
-        $controller->show();
+        $controller->showLogout();
       }
       break;
 
     case 'account':
 
-      if (isset($_GET['id'])) {
-        $controller = new accountController();
-        $controller->show();
+      if(isset($_SESSION['user_email'])){
+        if (isset($_GET['id'])) {
+          $controller = new accountController();
+          $controller->show();
+        }else{
+          header("Location: ./?page=account&id={$_SESSION['user_id']}");
+        }
       }else{
-        header("Location: ./?page=account&id={$_SESSION['user_id']}");
+        $controller = new logoutController();
+        $controller->showLogin();
+      }
+      break;
+
+    case 'account.edit':
+
+      if(isset($_SESSION['user_email'])){
+        $controller = new accountController();
+        $controller->edit();
+      }else{
+        $controller = new logoutController();
+        $controller->showLogin();
+      }
+      break;
+
+    case 'account.delete':
+
+      if(isset($_SESSION['user_email'])){
+        $controller = new accountController();
+        $controller->delete();
+      }else{
+        $controller = new logoutController();
+        $controller->showLogin();
+      }
+      break;
+
+     case 'account.delete.try':
+
+      if(isset($_SESSION['user_email'])){
+        $controller = new accountController();
+        $controller->processDelete();
+      }else{
+        $controller = new logoutController();
+        $controller->showLogin();
       }
       break;
 

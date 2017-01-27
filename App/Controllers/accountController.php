@@ -3,7 +3,10 @@
 namespace App\Controllers;
 
 use App\Views\accountView;
+use App\Views\deleteAccountView;
+use App\Views\editAccountView;
 use App\Models\userInfoModel;
+use App\Models\usersModel;
 
 Class accountController
 {
@@ -18,6 +21,31 @@ Class accountController
 	  };
 
       $view = new accountView(compact('user'));
+      $view->render();
+	}
+
+	public function edit(){
+
+	  $model = new userInfoModel();
+	  $user = $model->find($_GET['id']);
+
+	  $view = new editAccountView(compact('user'));
+      $view->render();
+	}
+
+	public function delete(){
+
+	  $view = new deleteAccountView();
+      $view->render();
+	}
+	public function processDelete(){
+
+	  $model = new usersModel();
+	  $result = $model->deleteUser();
+
+	  $error['the-error']='Wrong password.';
+
+	  $view = new deleteAccountView(compact('error'));
       $view->render();
 	}
 

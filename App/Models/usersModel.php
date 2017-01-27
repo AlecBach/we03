@@ -75,9 +75,9 @@ Class usersModel extends databaseModel
 			$_SESSION['user_id'] = $db->lastInsertId();
 			$_SESSION['user_email']= $_POST['email'];
 			$_SESSION['privilege'] = 'user';
-			// if (isset($destination)) {
-			// 	$_SESSION['user_image'] = $destination;
-			// };
+			if (isset($destination)) {
+				$_SESSION['user_image'] = $destination;
+			};
 
 			header('Location: index.php?page=account');
 		} else {
@@ -120,8 +120,9 @@ Class usersModel extends databaseModel
 				$_SESSION['user_id'] = $record['id'];
 				$_SESSION['privilage'] = $record['privilage'];
 				$_SESSION['user_email'] = $record['email'];
-				//$_SESSION['user_image'] = $record['profileImage'];
-
+				if (isset($record['profileImage'])){
+					$_SESSION['user_image'] = $record['profileImage'];
+				}
 
 				header('Location: ./?page=account');
 			} else {
@@ -191,7 +192,45 @@ Class usersModel extends databaseModel
 		return $destination;
 	}
 
+	public function deleteUser(){
 
+		$db = $this->getDatabaseConnection();
+
+		// Find the password of the user with a matching email
+		$sql = "SELECT id, password FROM users
+				WHERE email = :email  ";
+
+		$statement = $db->prepare($sql);
+
+		$statement->bindValue(':email', $_SESSION['user_email']);
+
+		$statement->execute();
+
+		$record = $statement->fetch(PDO::FETCH_ASSOC);
+		
+		if( is_array($record) ) {
+
+			$result = password_verify( $_POST['password'] ,$record['password']);
+
+			// If the result is good
+			if( $result == true ) {
+
+				$sql = "DELETE FROM users WHERE id = :id";
+
+				$statement = $db->prepare($sql);
+
+				$statement->bindValue(':id', $record['id']);
+
+				$statement->execute();
+
+				session_destroy();
+
+				header("Location: index.php");
+			}else{
+				return false;
+			}
+		}
+	}
 
 }
 

@@ -24,7 +24,7 @@
           </div>
           <div class="float-right nav hide-for-small-only nav-text">
               <?php if(!isset($_SESSION['user_email'])): ?><div class="nav-item float-right <?php if($page === "login" || $page === "register" ):?>active<?php endif; ?>"><a href="./?page=login">LOG IN</a></div><?php else: ?><div class="nav-item float-right"><a href="./?page=logout">LOG OUT</a></div><?php endif; ?>
-              <?php if(isset($_SESSION['user_email'])): ?><div class="nav-item float-right <?php if($page === "account" && $_GET['id'] === $_SESSION['user_id']):?>active<?php endif; ?>"><a href="./?page=account&?id=<?=$_SESSION['user_id']?>">ACCOUNT</a></div><?php endif; ?>
+              <?php if(isset($_SESSION['user_email'])): ?><div class="nav-item float-right <?php if($page === "account" && $_GET['id'] === $_SESSION['user_id']):?>active<?php endif; ?>"><a id="accountItem" href="./?page=account&?id=<?=$_SESSION['user_id']?>">ACCOUNT</a><div class="thumbCont"><img src="<?php if(isset($_SESSION['user_image'])): echo $_SESSION['user_image']; else: echo 'imgs/defaultProfileImage.png'; endif; ?>"></div></div><?php endif; ?>
               <div class="nav-item float-right <?php if($page === "contact"):?>active<?php endif; ?>"><a href="./?page=contact">CONTACT</a></div>
               <div class="nav-item float-right <?php if($page === "portfolio"):?>active<?php endif; ?>"><a href="./?page=portfolio">PORTFOLIO</a></div>
               <div class="nav-item float-right <?php if($page === "about"):?>active<?php endif; ?>"><a href="./?page=about">ABOUT</a></div>

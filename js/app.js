@@ -63,6 +63,8 @@ function positioning() {
 	switch (pageId){
 		case 'login':
 		case 'register':
+		case 'forceLogin':
+		case 'deleteAccount':
 		case 'logout':
 		case 'forgot':
 			var	form = $('#loginForm');
@@ -81,17 +83,23 @@ function positioning() {
 		case 'account':
 			// console.log("hello");
 			$('.centerText').each(function(){
-				verticleCenter(this);
+				verticleCenter({child:this,parent:1});
 			});
+			$('#content>.row>.columns').each(function(){
+				verticleCenter({child:this,parent:2});
+			})
 			break;
 	}
 }
-function verticleCenter(child){
-	var childHeight = $(child).innerHeight();
-	var parentHeight = $(child).parent().innerHeight();
-	// console.log(childHeight+" --- "+parentHeight);
+function verticleCenter(info){
+	var childHeight = $(info.child).innerHeight();
+	var parent = $(info.child);
+	for (var i = 0; i < info.parent; i++){
+		parent = $(parent).parent();
+	}
+	var parentHeight = $(parent).innerHeight();
 	var margin = parentHeight / 2 - childHeight / 2;
-	$(child).css({"margin-top": margin+"px", "margin-bottom": margin+"px"});
+	$(info.child).css({"margin-top": margin+"px", "margin-bottom": margin+"px"});
 }
 function positionOnSlide() {
 	switch (pageId){
