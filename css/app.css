@@ -1,5 +1,5 @@
 body {
-  background-color: #fafafa; }
+  background-color: #FAFAFA; }
 
 @font-face {
   font-family: 'Montserrat';
@@ -11,17 +11,17 @@ body {
   background-color: #424242; }
 
 .nav-item:hover, .menu li > a:hover {
-  background-color: #4c4c4c; }
+  background-color: #4C4C4C; }
 
 .top-nav-bar {
   background-color: #303030;
-  border-bottom: 1px solid #4c4c4c;
+  border-bottom: 1px solid #4C4C4C;
   position: fixed;
   top: 0;
   z-index: 5; }
 
 .nav-text, .nav-header {
-  color: #e4e5e5 !important;
+  color: #E4E5E5 !important;
   margin: 10px;
   font-family: 'Montserrat';
   font-size: 1.4em; }
@@ -52,7 +52,7 @@ body {
     width: 30px;
     height: 6px;
     margin-bottom: 5px;
-    background-color: #e4e5e5; }
+    background-color: #E4E5E5; }
   .burger-cont .burger-line:last-child {
     margin-bottom: 0; }
 
@@ -62,9 +62,9 @@ body {
   top: 53px;
   z-index: 5; }
   .burger-menu ul li {
-    border-bottom: 1px solid #4c4c4c; }
+    border-bottom: 1px solid #4C4C4C; }
     .burger-menu ul li a {
-      color: #e4e5e5;
+      color: #E4E5E5;
       font-family: 'Montserrat';
       font-size: 1.1em;
       padding-left: 0.625rem;
@@ -83,9 +83,9 @@ body {
     display: inline-block;
     padding: 0 12px;
     height: 52px;
-    border-left: 1px solid #4c4c4c; }
+    border-left: 1px solid #4C4C4C; }
     .nav .nav-item a {
-      color: #e4e5e5;
+      color: #E4E5E5;
       font-family: 'Montserrat';
       font-size: 1.1em;
       line-height: 52px; }
@@ -96,27 +96,29 @@ body {
       max-width: 45px;
       height: auto; }
   .nav .nav-item:first-child {
-    border-right: 1px solid #4c4c4c; }
+    border-right: 1px solid #4C4C4C; }
 
 #footer {
   background-image: url(../imgs/backgrounds/footer_lodyas.png);
-  color: #e4e5e5; }
+  color: #E4E5E5; }
   #footer span {
-    color: #fafafa;
+    color: #FAFAFA;
     font-family: 'Montserrat';
     font-size: 1.2em; }
+
+.blog-hero, .home-hero-cont {
+  height: 400px;
+  width: 100%; }
 
 .hero-image {
   background-image: url(http://placehold.it/800x400);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
-  .hero-image .home-hero-cont {
-    height: 400px; }
-    .hero-image .home-hero-cont .home-hero-text {
-      font-size: 1.5em;
-      color: #303030;
-      line-height: 1.1em; }
+  .hero-image .home-hero-text {
+    font-size: 1.5em;
+    color: #303030;
+    line-height: 1.1em; }
 
 .bump-for-nav {
   margin-top: 53px; }
@@ -222,7 +224,7 @@ img {
 
 .account .posts {
   background-color: white;
-  border-top: 1px solid #4c4c4c; }
+  border-top: 1px solid #4C4C4C; }
   .account .posts #noPosts {
     width: 100%;
     display: block;
@@ -232,8 +234,8 @@ img {
 .account .settings a {
   width: 33.333%;
   text-align: center;
-  background-color: #e4e5e5;
-  border: 1px solid #4c4c4c;
+  background-color: #E4E5E5;
+  border: 1px solid #4C4C4C;
   border-right: none;
   border-bottom: none; }
 .account .settings a:first-child {
@@ -340,8 +342,8 @@ img {
   .account .settings a {
     width: 33.333%;
     text-align: center;
-    background-color: #e4e5e5;
-    border: 1px solid #4c4c4c;
+    background-color: #E4E5E5;
+    border: 1px solid #4C4C4C;
     border-right: none;
     border-bottom: none; } }
 .editThumb {
@@ -360,3 +362,5 @@ img {
   #latest-work > div {
     padding-top: 180px;
     padding-bottom: 180px; } }
+
+/*# sourceMappingURL=app.css.map */

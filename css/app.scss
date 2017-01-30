@@ -135,21 +135,21 @@ body{
 		font-size: 1.2em;
 	}
 }
+.blog-hero, .home-hero-cont{
+	height: 400px;
+	width: 100%;
+}
 .hero-image{
 	background-image: url(http://placehold.it/800x400);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	.home-hero-cont {
-		height: 400px;
-		.home-hero-text {
-			font-size: 1.5em;
-			color: $darkerGrey;
-			line-height: 1.1em;
-			// margin-top: 150px;
-			// margin-bottom: 150px;
-		}
-	
+	.home-hero-text {
+		font-size: 1.5em;
+		color: $darkerGrey;
+		line-height: 1.1em;
+		// margin-top: 150px;
+		// margin-bottom: 150px;
 	}
 }
 .bump-for-nav{
