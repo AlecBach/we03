@@ -66,6 +66,7 @@ function positioning() {
 		case 'forceLogin':
 		case 'deleteAccount':
 		case 'editAccount':
+		case 'editPass':
 		case 'logout':
 		case 'forgot':
 			var	form = $('#loginForm');
@@ -204,7 +205,7 @@ function positionHeroText(){
 }
 
 function slideErrorText(){
-	if(pageId == "login" || pageId == "register"){
+	if(pageId == "login" || "register" || "editAccount" || "deleteAccount" || "editPass"){
 		$('form p').each(function(){
 			//var thisId = $(this).attr('id').slice(0, -8);
 			if (!$(this).html()==""){

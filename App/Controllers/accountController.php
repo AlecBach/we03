@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Views\accountView;
 use App\Views\deleteAccountView;
 use App\Views\editAccountView;
+use App\Views\editPassView;
 use App\Models\userInfoModel;
 use App\Models\usersModel;
 
@@ -38,11 +39,29 @@ Class accountController
 	  $user = $model->find($_SESSION['user_id']);
 
 	  $model = new usersModel();
-	  $result = $model->editUser();
+	  $result = $model->editUser($user);
 
-	  $error['the-error']='Wrong password.';
+	  //$error['the-error']='Wrong password.';
 
 	  $view = new editAccountView(compact('error user'));
+      $view->render();
+	}
+
+	public function editPass(){
+
+	  // $model = new userInfoModel();
+	  // $user = $model->find($_SESSION['user_id']);
+
+	  $view = new editPassView();
+      $view->render();
+	}
+
+	public function processEditPass(){
+
+	  $model = new usersModel();
+	  $user = $model->editPass();
+
+	  $view = new editPassView();
       $view->render();
 	}
 

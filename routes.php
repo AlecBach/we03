@@ -111,6 +111,28 @@ namespace App\Controllers;
       }
       break;
 
+    case 'account.editPass':
+
+      if(isset($_SESSION['user_email'])){
+        $controller = new accountController();
+        $controller->editPass();
+      }else{
+        $controller = new logoutController();
+        $controller->showLogin();
+      }
+      break;
+
+    case 'account.editPass.try':
+
+      if(isset($_SESSION['user_email'])){
+        $controller = new accountController();
+        $controller->processEditPass();
+      }else{
+        $controller = new logoutController();
+        $controller->showLogin();
+      }
+      break;
+
     case 'account.delete':
 
       if(isset($_SESSION['user_email'])){

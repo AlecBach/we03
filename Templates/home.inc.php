@@ -5,7 +5,7 @@
     </div>
   </div>
 </div>
-<div class="row expanded main padding-vert-med accountBg">
+<div class="row expanded main padding-vert-med">
   <div class="columns medium-offset-1 medium-10 xl-padding">
     <span>Hiya!</span><hr>I am a website programming specialist based in the capital of New Zealand, Wellington. I can provide front end design and server side programming. On this site I have my portfolio where you can see sites that I have already completed, my blog where I post irregularly about my opinions &amp; random stuff and a small page dedicated to information on me. Please dive in and enjoy the works you see!<hr>
     <div class="row expanded bump-small">
