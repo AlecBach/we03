@@ -10,7 +10,10 @@
 	        <input id="lastName" name="lastName" type="text" placeholder="John" value="<?=$user['lastName']?>" aria-describedby="lastNameHelpText">
 	      </label>
 	      <p class="help-text" id="lastNameHelpText"><?php if(isset($errors['lastName'])){echo $errors['firstName'];}?></p>
-	      <label for="profileImage" id="profileImageUploadText" class="button profileImageUploadText"><?php if(isset($_SESSION['user_image'])):echo"Change";else:echo"Upload";endif;?> Profile Image</label><?php if(isset($_SESSION['user_image'])):?><label class="profileImageUploadText currentImageText">Current Image: </label><div class="thumbCont editThumb"><img src="<?=$_SESSION['user_image'];?>"></div><?php endif;?>
+	      
+	      	<label for="profileImage" id="profileImageUploadText" class="button profileImageUploadText"><?php if(isset($_SESSION['user_image'])):echo"Change";else:echo"Upload";endif;?> Profile Image</label>
+	      	<?php if(isset($_SESSION['user_image'])):?><div style="display: inline-block"><label class="profileImageUploadText currentImageText">Current Image: </label><div class="thumbCont editThumb"><img src="<?=$_SESSION['user_image'];?>"></div></div><?php endif;?>
+		  
       	  <input type="file" name="image" id="profileImage" class="show-for-sr">
 	      <input class="button" id="submitButton" type="submit">
 	    </form>

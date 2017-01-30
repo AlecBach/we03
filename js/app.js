@@ -169,7 +169,7 @@ function setNavBar(){
 	var	windowWidth = $(window).outerWidth();
 	var headerWidth = $('#header-text').outerWidth(true);
 	if (loggedIn){
-		if (windowWidth < 1137) {
+		if (windowWidth < 1196) {
 			$('.burgerOuter').removeClass('hide');
 			integerRemove = 100;
 

@@ -144,7 +144,7 @@ namespace App\Controllers;
       }
       break;
 
-     case 'account.delete.try':
+    case 'account.delete.try':
 
       if(isset($_SESSION['user_email'])){
         $controller = new accountController();
@@ -153,6 +153,12 @@ namespace App\Controllers;
         $controller = new logoutController();
         $controller->showLogin();
       }
+      break;
+
+    case 'blog':
+
+      $controller = new blogController();
+      $controller->show();
       break;
 
     default:
