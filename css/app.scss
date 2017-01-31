@@ -135,7 +135,7 @@ body{
 		font-size: 1.2em;
 	}
 }
-.blog-hero, .home-hero-cont{
+.home-hero-cont{
 	height: 400px;
 	width: 100%;
 }
@@ -447,6 +447,111 @@ img {
 	display: none;
 	color: red;
 }
+.blog-hero{
+	width: 100%;
+	height: 300px;
+	background-image: url(../imgs/blog/concertcrowd.jpeg);
+	background-position: center;
+}
+.blog{
+	width: calc(100% - 40px);
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.blog-main, .blog-side-bar{
+	display: inline-block;
+	vertical-align: top;
+	
+}
+.blog-main{
+	width: 100%;
+	
+
+}
+.blog-side-bar{
+	display: none;
+}
+.blog-article{
+	margin-bottom: 15px;
+	border: 1px solid rgb(224,224,224);
+	.blog-article-text{
+		padding: 16px 22px;
+	}
+	.blog-article-img{
+		width: 100%;
+		height: 300px;
+		position: relative;
+		.text{
+			position: absolute;
+			bottom: 20px;
+			left: 22px;
+			width: calc(100% - 44px);
+			h3{
+				background-color: white;
+				font-size: 1.4em;
+				line-height: 1.7em;
+				color: $darkerGrey;
+				display: inline;
+				-webkit-box-decoration-break: clone;
+			    -moz-box-decoration-break: clone;
+			    box-decoration-break: clone;
+				padding: 4px;
+			}
+		}
+	}
+}
+.blog-article:last-child, .blog-side-bar-item:last-child{
+	margin-bottom: 20px;
+}
+//example images
+#blogimg1{
+	background-image: url(../imgs/blog/lonelychair.jpeg);
+	background-position: 50% 75%;
+	background-size: cover;
+}
+#blogimg2{
+	background-image: url(../imgs/blog/programming.jpeg);
+	background-position: 50% 75%;
+	background-size: cover;
+}
+#blogimg3{
+	background-image: url(../imgs/blog/bigriver.jpeg);
+	background-position: 50% 75%;
+	background-size: cover;
+}
+.blog-side-bar-item{
+	padding: 16px;
+	border: 1px solid rgb(224,224,224);
+	margin-bottom: 15px;
+	max-width: 100%;
+}
+.mail-sub-box{
+
+	h3{
+		font-size: 1.5em;
+		text-align: center;
+		line-height: 1.1em;
+		margin-bottom: 16px;
+	}
+	p{
+		margin-bottom: 5px;
+		line-height: 1.2em;
+	}
+	span{
+		font-size: 0.8em;
+		display: block;
+		margin-bottom: 15px;
+	}
+	input{
+		margin-bottom: 5px;
+		border-radius: 0;
+	}
+	.button{
+		width: 100%;
+		margin-bottom: 0;
+		border-radius: 0;
+	}
+}
 //Medium & up
 @media print, screen and (min-width: 40em){
 	.hero-image > .home-hero-cont {
@@ -485,13 +590,87 @@ img {
 .editThumb{
 	margin-top: 7.5px !important;
 }
+//820px & up
+@media print, screen and (min-width: 840px){
+	.blog{
+		width: 800px;
+	}
+	.blog-side-bar{
+		display: inline-block;
+		width: 210px;
+		margin-left: 20px;
+	}
+	.blog-main{
+		width: 570px;
+	}
+}
 //Large & up
 @media print, screen and (min-width: 64em){
 	.account {
 		// margin-top: 4em;
 		// margin-bottom: 4em;
 	}
-}	
+	
+}
+@media print, screen and (min-width: 68em){
+	.blog {
+		width: 1024px;
+		margin-top: 29px;
+	}
+	.blog-hero{
+		height: 350px;
+	}
+	.blog-side-bar{
+		display: inline-block;
+		width: 295px;
+		margin-left: 29px;
+	}
+	.blog-main{
+		width: 700px;
+	}
+	.blog-article{
+
+		.blog-article-img{
+
+			.text{
+
+				h3{
+					font-size: 1.6em;
+					line-height: 1.6em;
+				}
+			}
+		}
+	}
+	.blog-article:last-child, .blog-side-bar-item:last-child{
+		margin-bottom: 29px;
+	}
+	.mail-sub-box{
+
+		h3{
+			font-size: 1.9em;
+
+			// text-align: center;
+		}
+		p{
+			font-size: 1.2em;
+			// margin-bottom: 5px;
+		}
+		span{
+			// font-size: 0.8em;
+			// display: block;
+			// margin-bottom: 15px;
+		}
+		input{
+			// margin-bottom: 5px;
+			// border-radius: 0;
+		}
+		.button{
+			// width: 100%;
+			// margin-bottom: 0;
+			// border-radius: 0;
+		}
+	}
+}
 @media print, screen and (min-width: 75em){
 	.hero-image > .home-hero-cont {
 		height: 550px;

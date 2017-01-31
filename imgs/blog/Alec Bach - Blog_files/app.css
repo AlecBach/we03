@@ -347,35 +347,19 @@ img {
   vertical-align: top; }
 
 .blog-main {
-  width: 100%; }
+  width: 100%;
+  border: 1px solid #e0e0e0; }
 
 .blog-side-bar {
   display: none; }
 
 .blog-article {
-  margin-bottom: 15px;
-  border: 1px solid #e0e0e0; }
+  margin-bottom: 15px; }
   .blog-article .blog-article-text {
     padding: 16px 22px; }
   .blog-article .blog-article-img {
     width: 100%;
-    height: 300px;
-    position: relative; }
-    .blog-article .blog-article-img .text {
-      position: absolute;
-      bottom: 20px;
-      left: 22px;
-      width: calc(100% - 44px); }
-      .blog-article .blog-article-img .text h3 {
-        background-color: white;
-        font-size: 1.4em;
-        line-height: 1.7em;
-        color: #303030;
-        display: inline;
-        -webkit-box-decoration-break: clone;
-        -moz-box-decoration-break: clone;
-        box-decoration-break: clone;
-        padding: 4px; }
+    height: 300px; }
 
 .blog-article:last-child, .blog-side-bar-item:last-child {
   margin-bottom: 20px; }
@@ -384,16 +368,19 @@ img {
   background-image: url(../imgs/blog/lonelychair.jpeg);
   background-position: 50% 75%;
   background-size: cover; }
-
-#blogimg2 {
-  background-image: url(../imgs/blog/programming.jpeg);
-  background-position: 50% 75%;
-  background-size: cover; }
-
-#blogimg3 {
-  background-image: url(../imgs/blog/bigriver.jpeg);
-  background-position: 50% 75%;
-  background-size: cover; }
+  #blogimg1 .text {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    #blogimg1 .text h3 {
+      background-color: white;
+      color: #303030;
+      display: inline;
+      position: absolute;
+      left: 22px;
+      bottom: 16px;
+      max-width: calc(100% - 44px);
+      padding: 0 4px; }
 
 .blog-side-bar-item {
   padding: 16px;
@@ -465,10 +452,6 @@ img {
 
   .blog-main {
     width: 700px; }
-
-  .blog-article .blog-article-img .text h3 {
-    font-size: 1.6em;
-    line-height: 1.6em; }
 
   .blog-article:last-child, .blog-side-bar-item:last-child {
     margin-bottom: 29px; }
