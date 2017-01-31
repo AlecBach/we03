@@ -358,6 +358,7 @@ img {
       .blog .admin-text .admin-icons #close {
         color: red; }
       .blog .admin-text .admin-icons i {
+        font-size: 1.4em;
         margin-right: 5px; }
 
 .blog-main, .blog-side-bar {

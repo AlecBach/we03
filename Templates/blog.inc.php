@@ -8,7 +8,7 @@
 	<?php if(isset($_SESSION['user_id']) && $_SESSION['user_email'] == "alec.bach97@gmail.com"):?>
 		<div class="blog">
 			<div class="admin-text">
-				<p>Alec! Would you like to create a new blog post?</p>
+				<p>Greetings Alec! would you like to create blog post?</p>
 				<div class="admin-icons"><a href=""><i class="fa fa-check" aria-hidden="true"></i></a><i class="fa fa-times" id="close" aria-hidden="true"></i></div>
 			</div>
 		</div>
