@@ -97,6 +97,15 @@ function positioning() {
 				verticleCenter({child:this,parent:2});
 			})
 			break;
+		case 'blog':
+			$('.admin-text .fa').each(function(){
+				verticleCenter({child:this,parent:2});
+			})
+			$('.admin-text #close').one('click', function(){
+				$('.admin-text').slideUp();
+				$('.admin-text').parent().slideUp();
+			})
+			break;
 	}
 }
 function verticleCenter(info){

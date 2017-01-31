@@ -457,6 +457,33 @@ img {
 	width: calc(100% - 40px);
 	margin: 0 auto;
 	margin-top: 20px;
+	.admin-text{
+		
+		background-color: $darkerGrey;
+		color: white;
+		
+		font-size: 1em;
+		p{
+			margin: 0;
+			padding: 16px 22px;
+			padding-right: 0;
+			display: inline-block;
+		}
+		.admin-icons{
+			float: right;
+			margin-right: 22px;
+			a{
+				color: lightgreen;
+			}
+			#close{
+				color: red;
+			}
+			i{
+				margin-right: 5px;
+			}
+		}
+	}
+
 }
 .blog-main, .blog-side-bar{
 	display: inline-block;
@@ -594,6 +621,9 @@ img {
 @media print, screen and (min-width: 840px){
 	.blog{
 		width: 800px;
+		.admin-text{
+			font-size: 1.4em;
+		}
 	}
 	.blog-side-bar{
 		display: inline-block;
@@ -616,6 +646,7 @@ img {
 	.blog {
 		width: 1024px;
 		margin-top: 29px;
+
 	}
 	.blog-hero{
 		height: 350px;

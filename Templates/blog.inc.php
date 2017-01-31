@@ -3,7 +3,16 @@
 		
 	</div>
 </div>
+
 <div class="row expanded">
+	<?php if(isset($_SESSION['user_id']) && $_SESSION['user_email'] == "alec.bach97@gmail.com"):?>
+		<div class="blog">
+			<div class="admin-text">
+				<p>Alec! Would you like to create a new blog post?</p>
+				<div class="admin-icons"><a href=""><i class="fa fa-check" aria-hidden="true"></i></a><i class="fa fa-times" id="close" aria-hidden="true"></i></div>
+			</div>
+		</div>
+	<?php endif;?>
 	<div class="blog">
 <!-- 		<div class="row expanded">
 			<div class="columns small-12">
@@ -11,6 +20,7 @@
 				<hr>
 			</div>
 		</div> -->
+
 			<div class="blog-main">
 				<div class="blog-article">
 					<div class="blog-article-img" id="blogimg1">
