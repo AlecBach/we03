@@ -1,6 +1,10 @@
 <div class="row expanded">
 	<div class="blog-hero hero-image">
-		
+		<div class="blog-hero-text-center">
+			<div class="blog-hero-text">
+				<h3>Alec's road to programming enlightenment</h3>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -24,7 +28,7 @@
 			<div class="blog-main">
 				<div class="blog-article">
 					<div class="blog-article-img" id="blogimg1">
-						<div class="text">
+						<div class="article-img-text">
 							<h3>This is a title about a lonely chair.</h3>
 						</div>
 					</div>
@@ -40,7 +44,7 @@
 				</div>
 				<div class="blog-article">
 					<div class="blog-article-img" id="blogimg2">
-						<div class="text">
+						<div class="article-img-text">
 							<h3>This is a title about programming issues and or tips for workspace flow.</h3>
 						</div>
 					</div>
@@ -56,7 +60,7 @@
 				</div>
 				<div class="blog-article">
 					<div class="blog-article-img" id="blogimg3">
-						<div class="text">
+						<div class="article-img-text">
 							<h3>This is a title about this big ass river, probably thames river but not sure.</h3>
 						</div>
 					</div>
