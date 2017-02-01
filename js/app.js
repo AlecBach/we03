@@ -67,6 +67,7 @@ function positioning() {
 		case 'deleteAccount':
 		case 'editAccount':
 		case 'editPass':
+		case 'blogForm':
 		case 'logout':
 		case 'forgot':
 			var	form = $('#loginForm');

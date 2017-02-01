@@ -86,6 +86,33 @@ abstract Class databaseModel
 		return $record;
 
 	}
+
+	public function findAll(){
+
+		// $id = isset($_GET['id']) ? $_GET['id'] : null;
+
+		$db = $this->getDatabaseConnection();
+
+		$sql = "SELECT ". implode(',', static::$columns). " FROM ". static::$tablename ." ORDER BY id DESC LIMIT 5";
+
+		$statement = $db->prepare($sql);
+
+		$statement->execute();
+
+		$Array = [];
+
+		while($record = $statement->fetch(PDO::FETCH_ASSOC)){
+			if(isset($record['content'])){
+				$record['content'] = substr($record['content'],0,500);
+			}
+			array_push($Array, $record);
+		};
+
+
+
+		return $Array;
+
+	}
 	// public function save(){
 
 	// 	$db = $this->getDatabaseConnection();

@@ -7,13 +7,12 @@
 		</div>
 	</div>
 </div>
-
 <div class="row expanded">
 	<?php if(isset($_SESSION['user_id']) && $_SESSION['user_email'] == "alec.bach97@gmail.com"):?>
 		<div class="blog">
 			<div class="admin-text">
 				<p>Greetings Alec! would you like to create blog post?</p>
-				<div class="admin-icons"><a href=""><i class="fa fa-check" aria-hidden="true"></i></a><i class="fa fa-times" id="close" aria-hidden="true"></i></div>
+				<div class="admin-icons"><a href="./?page=blog.adminPost"><i class="fa fa-check" aria-hidden="true"></i></a><i class="fa fa-times" id="close" aria-hidden="true"></i></div>
 			</div>
 		</div>
 	<?php endif;?>
@@ -26,22 +25,19 @@
 		</div> -->
 
 			<div class="blog-main">
+				<?php foreach($allPosts as $post): ?>
 				<div class="blog-article">
-					<div class="blog-article-img" id="blogimg1">
+					<a href="./page=blog&id=<?= $post['id'] ?>"><div class="blog-article-img" style="background-image: url(<?= $post['image'] ?>); background-size: cover; background-position: center;">
 						<div class="article-img-text">
-							<h3>This is a title about a lonely chair.</h3>
+							<h3><?= $post['title'] ?></h3>
 						</div>
-					</div>
+					</div></a>
 					<div class="blog-article-text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam........ <span><a href="">Read full post.</a></span>
+						<?= $post['content'] ?>... <span><a href="./page=blog&id=<?= $post['id'] ?>">View full post and comments.</a></span>
 					</div>
 				</div>
+				<?php endforeach; ?>
+				
 				<div class="blog-article">
 					<div class="blog-article-img" id="blogimg2">
 						<div class="article-img-text">
@@ -55,7 +51,7 @@
 						consequat. <br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam........ <span><a href="">Read full post.</a>
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam........ <span><a href="">View full post and comments.</a>
 					</div>
 				</div>
 				<div class="blog-article">
@@ -71,7 +67,7 @@
 						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. <br><br>Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam........ <span><a href="">Read full post.</a>
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam........ <span><a href="">View full post and comments.</a>
 					</div>
 				</div>
 			</div><!-- 

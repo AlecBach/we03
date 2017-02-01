@@ -52,12 +52,11 @@
       </ul>
     </div>
 
-    
     <div id="content" class="<?=$page?>Bg">
       <?php $this->content() ?>
     </div>
 
-    <div class="row expanded" id="footer">
+    <div class="row expanded <?= $page ?>-specific-footer" id="footer">
       <div class="columns medium-offset-1 medium-10 xl-padding">
         <div class="row expanded bump-large">
           <div class="columns medium-4 small-6"><span>CONTACT</span><hr>Contact me to arange a meeting where we will form an idea that will eventually grow in to a beautiful, fully functional website!<ul><li>Phone: <a href="tel:+64221964014">+6422 196 4014</a></li><li>Email: <a href="mailto:alec.bach97@gmail.com">alec.bach97@gmail.com</a></li></div>

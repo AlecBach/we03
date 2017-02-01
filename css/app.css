@@ -341,7 +341,7 @@ img {
   position: relative; }
 
 .blog {
-  margin-top: 20px; }
+  margin-top: 20px !important; }
 
 .blog-hero-text-center {
   height: 300px;
@@ -461,6 +461,25 @@ img {
   margin-bottom: 0;
   border-radius: 0; }
 
+.blog-specific-footer > div {
+  width: 100% !important;
+  max-width: none !important;
+  flex: none !important;
+  margin: 0 !important;
+  padding: 0 !important; }
+  .blog-specific-footer > div > div {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: calc(100% - 40px); }
+    .blog-specific-footer > div > div > div {
+      padding: 0 15px 0 15px; }
+    .blog-specific-footer > div > div > div:first-child {
+      padding: 0 15px 0 0; }
+    .blog-specific-footer > div > div > div:nth-child(2) {
+      padding-right: 0; }
+    .blog-specific-footer > div > div > div:last-child {
+      padding-right: 0; }
+
 @media print, screen and (min-width: 40em) {
   .hero-image > .home-hero-cont {
     height: 475px; }
@@ -491,7 +510,12 @@ img {
     margin-left: 20px; }
 
   .blog-main {
-    width: 570px; } }
+    width: 570px; }
+
+  .blog-specific-footer > div > div {
+    width: 800px; }
+    .blog-specific-footer > div > div > div:nth-child(2) {
+      padding-right: 15px; } }
 @media print, screen and (min-width: 68em) {
   .blog, .blog-hero-text-center {
     width: 1024px; }
@@ -526,7 +550,10 @@ img {
   .mail-sub-box h3 {
     font-size: 1.9em; }
   .mail-sub-box p {
-    font-size: 1.2em; } }
+    font-size: 1.2em; }
+
+  .blog-specific-footer > div > div {
+    width: 1024px; } }
 @media print, screen and (min-width: 75em) {
   .hero-image > .home-hero-cont {
     height: 550px; }

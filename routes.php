@@ -156,9 +156,30 @@ namespace App\Controllers;
       break;
 
     case 'blog':
+      if(isset($_GET['id'])){
+        $controller = new blogController();
+        $controller->showSpecific($_GET['id']);
+      }else{
+        $controller = new blogController();
+        $controller->show();
+      }
+      break;
+
+    case 'blog.adminPost':
+
+      if(isset($_SESSION['user_email']) && $_SESSION['user_email'] == "alec.bach97@gmail.com"){
+        $controller = new blogController();
+        $controller->showPost();
+      }else{
+        $controller = new logoutController();
+        $controller->showLogin();
+      }
+      break;
+
+     case 'blog.store':
 
       $controller = new blogController();
-      $controller->show();
+      $controller->store();
       break;
 
     default:
