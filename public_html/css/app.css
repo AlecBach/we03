@@ -1,0 +1,569 @@
+body {
+  background-color: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Montserrat-Bold"), url(../fonts/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+.active, .menu .active > a {
+  background-color: #424242; }
+
+.nav-item:hover, .menu li > a:hover {
+  background-color: #4c4c4c; }
+
+.top-nav-bar {
+  background-color: #303030;
+  border-bottom: 1px solid #4c4c4c;
+  position: fixed;
+  top: 0;
+  z-index: 5; }
+
+.nav-text, .nav-header {
+  color: #e4e5e5 !important;
+  margin: 10px;
+  font-family: 'Montserrat';
+  font-size: 1.4em; }
+
+.nav-header {
+  margin: 11px 10px;
+  margin-left: 0;
+  line-height: 1.05em;
+  font-size: 1.8em; }
+
+.fullWidth {
+  width: 100% !important;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: initial; }
+
+.hide {
+  display: none !important; }
+
+.burger-cont {
+  z-index: 1;
+  margin: 12px 10px;
+  margin-right: 0px;
+  margin-left: 15px; }
+  .burger-cont .burger-line {
+    width: 30px;
+    height: 6px;
+    margin-bottom: 5px;
+    background-color: #e4e5e5; }
+  .burger-cont .burger-line:last-child {
+    margin-bottom: 0; }
+
+.burger-menu {
+  display: none;
+  position: fixed;
+  top: 53px;
+  z-index: 5; }
+  .burger-menu ul li {
+    border-bottom: 1px solid #4c4c4c; }
+    .burger-menu ul li a {
+      color: #e4e5e5;
+      font-family: 'Montserrat';
+      font-size: 1.1em;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      background-color: #303030; }
+    @media screen and (min-width: 40em) {
+      .burger-menu ul li a {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+
+.nav {
+  overflow: hidden;
+  height: 52px;
+  margin: 0; }
+  .nav .nav-item {
+    display: inline-block;
+    padding: 0 12px;
+    height: 52px;
+    border-left: 1px solid #4c4c4c; }
+    .nav .nav-item a {
+      color: #e4e5e5;
+      font-family: 'Montserrat';
+      font-size: 1.1em;
+      line-height: 52px; }
+    .nav .nav-item #accountItem {
+      display: inline-block;
+      vertical-align: top; }
+    .nav .nav-item img {
+      max-width: 45px;
+      height: auto; }
+  .nav .nav-item:first-child {
+    border-right: 1px solid #4c4c4c; }
+
+#footer {
+  background-image: url(../imgs/backgrounds/footer_lodyas.png);
+  color: #e4e5e5; }
+  #footer span {
+    color: #fafafa;
+    font-family: 'Montserrat';
+    font-size: 1.2em; }
+
+.home-hero-cont {
+  height: 400px;
+  width: 100%; }
+
+.hero-image {
+  background-image: url(http://placehold.it/800x400);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .hero-image .home-hero-text {
+    font-size: 1.5em;
+    color: #303030;
+    line-height: 1.1em; }
+
+.bump-for-nav {
+  margin-top: 53px; }
+
+.bump-small {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+
+.bump-medium {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+
+.bump-large {
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
+
+.padding-vert-med {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+
+.main span {
+  font-size: 1.6em; }
+
+.main:last-child {
+  margin-bottom: 0 !important; }
+
+hr {
+  max-width: 99999px;
+  margin: 0.5rem 0 0.75rem 0; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */ }
+
+#finalDeleteWarning {
+  color: red;
+  display: inline-block;
+  margin-top: 17px;
+  margin-bottom: 0; }
+
+.redText {
+  color: red; }
+  .redText a {
+    color: red !important;
+    transition: color 0.4s ease-in-out; }
+  .redText a:hover {
+    color: darkred !important; }
+
+#latest-work {
+  background-image: url(../imgs/wellbrew_blur.jpg);
+  background-position: center;
+  background-size: cover; }
+  #latest-work > div {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: white;
+    z-index: 1; }
+    #latest-work > div > hr {
+      color: white; }
+    #latest-work > div > p {
+      margin-bottom: 3px; }
+      #latest-work > div > p > span {
+        color: #2ba6cb;
+        font-size: 1em; }
+
+.button-spacer {
+  display: inline-block;
+  height: 47px;
+  width: 10px; }
+
+.profileImageUploadText {
+  vertical-align: top !important;
+  display: inline-block !important; }
+
+.currentImageText {
+  margin: 15px -2px 0 10px;
+  font-size: 0.9em !important; }
+
+#darken-clarity {
+  width: 100%;
+  height: 135px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  padding: 0 !important; }
+
+.thumbCont {
+  overflow: hidden;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 5px; }
+  .thumbCont img {
+    max-width: 100%;
+    height: auto; }
+
+.accountBg {
+  background-image: url(../imgs/backgrounds/light_grey.png);
+  background-size: 46px 23px; }
+
+.account .posts {
+  background-color: white;
+  border-top: 1px solid #4c4c4c; }
+  .account .posts #noPosts {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 30px; }
+.account .settings a {
+  width: 33.333%;
+  text-align: center;
+  background-color: #e4e5e5;
+  border: 1px solid #4c4c4c;
+  border-right: none;
+  border-bottom: none; }
+.account .settings a:first-child {
+  border-left: none; }
+.account .imgCont {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px; }
+  .account .imgCont img {
+    width: 100% !important;
+    height: auto !important; }
+.account .top-sml {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 20px 30px; }
+  .account .top-sml .imgCont {
+    margin: 0 auto; }
+  .account .top-sml img {
+    display: block;
+    margin: 0 auto; }
+  .account .top-sml .textCont {
+    width: 100%;
+    padding-top: 20px; }
+    .account .top-sml .textCont #nameText, .account .top-sml .textCont #emailText, .account .top-sml .textCont #statsText {
+      text-align: center; }
+    .account .top-sml .textCont #emailText {
+      margin-top: -11px; }
+    .account .top-sml .textCont #statsText {
+      margin-top: -7px;
+      margin-bottom: 0px; }
+.account .top-med, .account .top-lrg {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 40px; }
+  .account .top-med .textBlock, .account .top-lrg .textBlock {
+    width: 100%; }
+  .account .top-med .textCont, .account .top-lrg .textCont {
+    width: calc(100% - 200px);
+    height: 200px;
+    padding-left: 20px;
+    display: inline-block; }
+  .account .top-med .block, .account .top-lrg .block {
+    display: inline-block;
+    vertical-align: top; }
+  .account .top-med #emailText, .account .top-med #nameText, .account .top-med #statsText, .account .top-lrg #emailText, .account .top-lrg #nameText, .account .top-lrg #statsText {
+    width: 100%;
+    margin: 0; }
+.account .top-med #emailText {
+  margin-top: -7px; }
+.account .top-med #statsText {
+  margin-top: -2px; }
+.account .top-lrg #emailText {
+  margin-top: -10px; }
+.account .top-lrg #statsText {
+  margin-top: -2px; }
+
+#loginForm h2, #registerForm h2 {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 2.5rem !important;
+  display: inline-block; }
+#loginForm #registerLink, #loginForm #homeLink, #registerForm #registerLink, #registerForm #homeLink {
+  float: right !important;
+  display: inline-block;
+  padding-top: 30px;
+  margin-top: 0;
+  color: #2ba6cb;
+  transition: color 0.25s ease-out; }
+#loginForm #homeLink, #loginForm #logoutLink, #registerForm #homeLink, #registerForm #logoutLink {
+  padding: 0 !important; }
+#loginForm #registerLink:hover, #loginForm #homeLink:hover, #registerForm #registerLink:hover, #registerForm #homeLink:hover {
+  color: #258dad; }
+#loginForm label, #registerForm label {
+  font-size: 1.4em; }
+#loginForm #profileImageUploadText, #registerForm #profileImageUploadText {
+  font-size: 0.9rem !important;
+  margin-top: 8px; }
+#loginForm #forgotPasswordText, #registerForm #forgotPasswordText {
+  font-size: 1em;
+  display: inline-block;
+  padding: 11px 0 16px 0; }
+#loginForm input, #registerForm input {
+  margin: 0.05rem 0 0.2rem !important; }
+#loginForm #submitButton, #registerForm #submitButton {
+  float: right;
+  margin-top: 8px !important; }
+
+.help-text {
+  margin: 0.5rem 0 0 !important;
+  display: none;
+  color: red; }
+
+.blog-hero {
+  width: 100%;
+  height: 300px;
+  background-image: url(../imgs/blog/concertcrowd.jpeg);
+  background-position: center;
+  position: relative; }
+
+.blog {
+  margin-top: 20px !important; }
+
+.blog-hero-text-center {
+  height: 300px;
+  position: relative; }
+
+.blog, .blog-hero-text-center {
+  margin: 0 auto;
+  width: calc(100% - 40px); }
+  .blog .admin-text, .blog-hero-text-center .admin-text {
+    background-color: #303030;
+    color: white;
+    font-size: 1em; }
+    .blog .admin-text p, .blog-hero-text-center .admin-text p {
+      margin: 0;
+      padding: 16px 22px;
+      padding-right: 0;
+      display: inline-block; }
+    .blog .admin-text .admin-icons, .blog-hero-text-center .admin-text .admin-icons {
+      float: right;
+      margin-right: 22px; }
+      .blog .admin-text .admin-icons a, .blog-hero-text-center .admin-text .admin-icons a {
+        color: lightgreen; }
+      .blog .admin-text .admin-icons #close, .blog-hero-text-center .admin-text .admin-icons #close {
+        color: red; }
+      .blog .admin-text .admin-icons i, .blog-hero-text-center .admin-text .admin-icons i {
+        font-size: 1.4em;
+        margin-right: 5px; }
+
+.blog-main, .blog-side-bar {
+  display: inline-block;
+  vertical-align: top; }
+
+.blog-main {
+  width: 100%; }
+
+.blog-side-bar {
+  display: none; }
+
+.blog-article {
+  margin-bottom: 15px;
+  border: 1px solid #e0e0e0; }
+  .blog-article .blog-article-text {
+    padding: 16px 22px; }
+  .blog-article .blog-article-img {
+    width: 100%;
+    height: 300px;
+    position: relative; }
+
+.article-img-text, .blog-hero-text {
+  position: absolute; }
+  .article-img-text h3, .blog-hero-text h3 {
+    background-color: white;
+    font-size: 1.4em;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    line-height: 1.6em;
+    color: #303030;
+    display: inline;
+    -webkit-box-decoration-break: clone;
+    -moz-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0 4px; }
+
+.article-img-text {
+  bottom: 20px;
+  left: 22px;
+  width: calc(100% - 44px); }
+
+.blog-hero-text {
+  bottom: 35px;
+  width: 100%; }
+  .blog-hero-text h3 {
+    font-size: 1.6em;
+    line-height: 1.5em; }
+
+.blog-article:last-child, .blog-side-bar-item:last-child {
+  margin-bottom: 20px; }
+
+#blogimg1 {
+  background-image: url(../imgs/blog/lonelychair.jpeg);
+  background-position: 50% 75%;
+  background-size: cover; }
+
+#blogimg2 {
+  background-image: url(../imgs/blog/programming.jpeg);
+  background-position: 50% 75%;
+  background-size: cover; }
+
+#blogimg3 {
+  background-image: url(../imgs/blog/bigriver.jpeg);
+  background-position: 50% 75%;
+  background-size: cover; }
+
+.blog-side-bar-item {
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 15px;
+  max-width: 100%; }
+
+.mail-sub-box h3 {
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 1.1em;
+  margin-bottom: 16px; }
+.mail-sub-box p {
+  margin-bottom: 5px;
+  line-height: 1.2em; }
+.mail-sub-box span {
+  font-size: 0.8em;
+  display: block;
+  margin-bottom: 15px; }
+.mail-sub-box input {
+  margin-bottom: 5px;
+  border-radius: 0; }
+.mail-sub-box .button {
+  width: 100%;
+  margin-bottom: 0;
+  border-radius: 0; }
+
+.blog-specific-footer > div {
+  width: 100% !important;
+  max-width: none !important;
+  flex: none !important;
+  margin: 0 !important;
+  padding: 0 !important; }
+  .blog-specific-footer > div > div {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: calc(100% - 40px); }
+    .blog-specific-footer > div > div > div {
+      padding: 0 15px 0 15px; }
+    .blog-specific-footer > div > div > div:first-child {
+      padding: 0 15px 0 0; }
+    .blog-specific-footer > div > div > div:nth-child(2) {
+      padding-right: 0; }
+    .blog-specific-footer > div > div > div:last-child {
+      padding-right: 0; }
+
+@media print, screen and (min-width: 40em) {
+  .hero-image > .home-hero-cont {
+    height: 475px; }
+
+  #latest-work > div {
+    padding-top: 120px;
+    padding-bottom: 120px; }
+
+  .account .settings a {
+    width: 33.333%;
+    text-align: center;
+    background-color: #e4e5e5;
+    border: 1px solid #4c4c4c;
+    border-right: none;
+    border-bottom: none; } }
+.editThumb {
+  margin-top: 7.5px !important; }
+
+@media print, screen and (min-width: 840px) {
+  .blog, .blog-hero-text-center {
+    width: 800px; }
+    .blog .admin-text, .blog-hero-text-center .admin-text {
+      font-size: 1.4em; }
+
+  .blog-side-bar {
+    display: inline-block;
+    width: 210px;
+    margin-left: 20px; }
+
+  .blog-main {
+    width: 570px; }
+
+  .blog-specific-footer > div > div {
+    width: 800px; }
+    .blog-specific-footer > div > div > div:nth-child(2) {
+      padding-right: 15px; } }
+@media print, screen and (min-width: 68em) {
+  .blog, .blog-hero-text-center {
+    width: 1024px; }
+
+  .blog {
+    margin-top: 29px; }
+
+  .blog-hero-text {
+    bottom: 40px; }
+    .blog-hero-text h3 {
+      font-size: 2em;
+      line-height: 1.5em; }
+
+  .blog-hero, .blog-hero-text-center {
+    height: 350px; }
+
+  .blog-side-bar {
+    display: inline-block;
+    width: 295px;
+    margin-left: 29px; }
+
+  .blog-main {
+    width: 700px; }
+
+  .blog-article .blog-article-img .text h3 {
+    font-size: 1.6em;
+    line-height: 1.5em; }
+
+  .blog-article:last-child, .blog-side-bar-item:last-child {
+    margin-bottom: 29px; }
+
+  .mail-sub-box h3 {
+    font-size: 1.9em; }
+  .mail-sub-box p {
+    font-size: 1.2em; }
+
+  .blog-specific-footer > div > div {
+    width: 1024px; } }
+@media print, screen and (min-width: 75em) {
+  .hero-image > .home-hero-cont {
+    height: 550px; }
+
+  .xl-padding, .xl-padding-right {
+    padding-right: 50px; }
+
+  .xl-padding, .xl-padding-left {
+    padding-left: 50px; }
+
+  #latest-work > div {
+    padding-top: 180px;
+    padding-bottom: 180px; } }
