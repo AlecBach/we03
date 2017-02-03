@@ -27,13 +27,13 @@
 			<div class="blog-main">
 				<?php foreach($allPosts as $post): ?>
 				<div class="blog-article">
-					<a href="./page=blog&id=<?= $post['id'] ?>"><div class="blog-article-img" style="background-image: url(<?= $post['image'] ?>); background-size: cover; background-position: center;">
+					<a href="./?page=blog&id=<?= $post['id'] ?>"><div class="blog-article-img" style="background-image: url(<?= $post['image'] ?>); background-size: cover; background-position: center;">
 						<div class="article-img-text">
 							<h3><?= $post['title'] ?></h3>
 						</div>
 					</div></a>
 					<div class="blog-article-text">
-						<?= $post['content'] ?>... <span><a href="./page=blog&id=<?= $post['id'] ?>">View full post and comments.</a></span>
+						<?= $post['content'] ?>... <span><a href="./?page=blog&id=<?= $post['id'] ?>">View full post and comments.</a></span>
 					</div>
 				</div>
 				<?php endforeach; ?>

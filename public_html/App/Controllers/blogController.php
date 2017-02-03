@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Views\blogView;
 use App\Views\blogFormView;
+use App\Views\blogArticleView;
 use App\Models\postsModel;
 
 Class blogController
@@ -20,8 +21,13 @@ Class blogController
       $view->render();
 	}
 	public function showSpecific($id){
+
 	  $post = [];
 	  $model = new postsModel();
+	  $post = $model->find($id);
+
+	  $view = new blogArticleView(compact('post'));
+	  $view->render();
 	}
 	public function showPost(){
 	  $view = new blogFormView();

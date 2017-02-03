@@ -82,6 +82,10 @@ abstract Class databaseModel
 		$result = $statement->execute();
 
 		$record = $statement->fetch(PDO::FETCH_ASSOC);
+
+		if(isset($record['date_posted'])){
+			$record['date_posted'] = date("jS \of F Y", strtotime($record['date_posted']));
+		}
 		
 		return $record;
 
@@ -102,6 +106,9 @@ abstract Class databaseModel
 		$Array = [];
 
 		while($record = $statement->fetch(PDO::FETCH_ASSOC)){
+			if(isset($record['date_posted'])){
+				$record['date_posted'] = date("jS \of F Y", strtotime($record['date_posted']));
+			}
 			if(isset($record['content'])){
 				$record['content'] = substr($record['content'],0,500);
 			}
