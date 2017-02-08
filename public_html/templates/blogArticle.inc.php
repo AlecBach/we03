@@ -1,9 +1,28 @@
 <div class="row expanded">
 	<div class="blog-hero hero-image" style="background-image: url(<?= $post['image'] ?>) !important;">
 		<div class="blog-hero-text-center">
+			<div class="blog-hero-back">
+				<a href="./?page=blog"><h3><i class="fa fa-arrow-left" aria-hidden="true"></i> Back to blog</h3></a>
+			</div>
 			<div class="blog-hero-text">
 				<h3><?= $post['title'] ?></h3>
 			</div>
+			<?php if(isset($_SESSION['user_id']) && $_SESSION['privilage'] == "Admin"):?>
+				<div class="change-article">
+					<a data-open="deleteModal<?= $post['id'] ?>" id="del">Delete<i class="fa fa-times" aria-hidden="true"></i></a>
+					<a href="./?page=blog.edit&id=<?= $post['id'] ?>" id="edit">Edit<i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+					<div class="reveal" id="deleteModal<?= $post['id']?>" data-reveal>
+					  <h1>Delete Post.</h1>
+					  <p class="lead">Are you sure you want to delete: "<?= $post['title']?>"?</p>
+					  <span class="redText"><a href="./?page=blog.delete&id=<?= $post['id']?>">delete</a></span>
+					  <button class="close-button" data-close aria-label="Close reveal" type="button">
+					    <span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+
+				</div>
+			<?php endif;?>
 		</div>
 	</div>
 </div>

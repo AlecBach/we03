@@ -8,11 +8,11 @@
 	</div>
 </div>
 <div class="row expanded">
-	<?php if(isset($_SESSION['user_id']) && $_SESSION['user_email'] == "alec.bach97@gmail.com"):?>
+	<?php if(isset($_SESSION['user_id']) && $_SESSION['privilage'] == "Admin"):?>
 		<div class="blog">
 			<div class="admin-text">
 				<p>Greetings Alec! would you like to create blog post?</p>
-				<div class="admin-icons"><a href="./?page=blog.adminPost"><i class="fa fa-check" aria-hidden="true"></i></a><i class="fa fa-times" id="close" aria-hidden="true"></i></div>
+				<div class="admin-icons"><i class="fa fa-check" id="create" aria-hidden="true"></i><i class="fa fa-times" id="close" aria-hidden="true"></i></div>
 			</div>
 		</div>
 	<?php endif;?>
@@ -31,7 +31,24 @@
 						<div class="article-img-text">
 							<h3><?= $post['title'] ?></h3>
 						</div>
+						
 					</div></a>
+					<?php if(isset($_SESSION['user_id']) && $_SESSION['privilage'] == "Admin"):?>
+						<div class="change-article">
+							<a data-open="deleteModal<?= $post['id'] ?>" id="del">Delete<i class="fa fa-times" aria-hidden="true"></i></a>
+							<a href="./?page=blog.edit&id=<?= $post['id'] ?>" id="edit">Edit<i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+							<div class="reveal" id="deleteModal<?= $post['id']?>" data-reveal>
+							  <h1>Delete Post.</h1>
+							  <p class="lead">Are you sure you want to delete: "<?= $post['title']?>"?</p>
+							  <span class="redText"><a href="./?page=blog.delete&id=<?= $post['id']?>">delete</a></span>
+							  <button class="close-button" data-close aria-label="Close reveal" type="button">
+							    <span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+
+						</div>
+					<?php endif;?>
 					<div class="blog-article-text">
 						<?= $post['content'] ?>... <span><a href="./?page=blog&id=<?= $post['id'] ?>">View full post and comments.</a></span>
 					</div>

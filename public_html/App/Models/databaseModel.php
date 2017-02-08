@@ -152,7 +152,7 @@ abstract Class databaseModel
 
 	// }
 	public function update(){
-
+		die(var_dump($this));
 		// get database connection
 		$db = $this->getDatabaseConnection();
 
@@ -184,13 +184,13 @@ abstract Class databaseModel
 
 	}
 
-	// public static function destroy($id){
-	// 	$db = self::getDatabaseConnection();
-	// 	$sql = "DELETE FROM " . static::$tablename . " WHERE id=:id";
-	// 	$statement = $db->prepare($sql);
-	// 	$statement->bindValue(":id", $id);
-	// 	$statement->execute();
-	// }
+	public static function destroy($id){
+		$db = self::getDatabaseConnection();
+		$sql = "DELETE FROM " . static::$tablename . " WHERE id=:id";
+		$statement = $db->prepare($sql);
+		$statement->bindValue(":id", $id);
+		$statement->execute();
+	}
 
 	// public function __get($name){
 	// 	if(in_array($name, static::$columns)){

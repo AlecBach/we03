@@ -167,19 +167,59 @@ namespace App\Controllers;
 
     case 'blog.adminPost':
 
-      if(isset($_SESSION['user_email']) && $_SESSION['user_email'] == "alec.bach97@gmail.com"){
+      if(isset($_SESSION['user_email']) && $_SESSION['privilage'] == "Admin"){
         $controller = new blogController();
         $controller->showPost();
       }else{
-        $controller = new logoutController();
-        $controller->showLogin();
+        header("Location: ./?page=naughty");
       }
       break;
 
-     case 'blog.store':
+    case 'blog.delete':
 
-      $controller = new blogController();
-      $controller->store();
+      if(isset($_SESSION['user_email']) && $_SESSION['privilage'] == "Admin"){
+        $controller = new blogController();
+        $controller->delete($_GET['id']);
+        header("Location: ./?page=blog");
+      }else{
+        header("Location: ./?page=naughty");
+      }
+      break;
+
+     case 'blog.edit':
+
+      if(isset($_SESSION['user_email']) && $_SESSION['privilage'] == "Admin"){
+        $controller = new blogController();
+        $controller->editPost($_GET['id']);
+      }else{
+        header("Location: ./?page=naughty");
+      }
+      break;
+
+    case 'blog.edit.try':
+
+      if(isset($_SESSION['user_email']) && $_SESSION['privilage'] == "Admin"){
+        $controller = new blogController();
+        $controller->processEditPost($_GET['id']);
+      }else{
+        header("Location: ./?page=naughty");
+      }
+      break;
+
+    case 'blog.store':
+
+      if(isset($_SESSION['user_email']) && $_SESSION['privilage'] == "Admin"){
+        $controller = new blogController();
+        $controller->store();
+      }else{
+        header("Location: ./?page=naughty");
+      }
+      break;
+
+    case "naughty":
+
+      $controller = new controller404();
+      $controller->show();
       break;
 
     default:

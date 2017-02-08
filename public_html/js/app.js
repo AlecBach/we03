@@ -103,6 +103,10 @@ function positioning() {
 				$('.admin-text').slideUp();
 				$('.admin-text').parent().slideUp();
 			})
+			$('.admin-text #create').one('click', function(){
+				window.location.href = "./?page=blog.adminPost";
+			})
+			
 			break;
 	}
 }

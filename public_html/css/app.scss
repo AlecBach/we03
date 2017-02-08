@@ -449,6 +449,28 @@ img {
 	display: none;
 	color: red;
 }
+.change-article{
+	position: absolute;
+	z-index: 5;
+	right: 22px;
+	top: 20px;
+	a{
+		padding: 3px 8px;
+		margin-left: 10px;
+		color: white;
+		float: right;
+		font-size: 1.2em;
+	}
+	i{
+		margin-left: 5px;
+	}
+	#del{
+		background-color: red;
+	}
+	#edit{
+		background-color: #2ba6cb;
+	}
+}
 .blog-hero{
 	width: 100%;
 	height: 300px;
@@ -462,6 +484,9 @@ img {
 .blog-hero-text-center{
 	height: 300px;
 	position: relative;
+	.change-article{
+		top: 35px;
+	}
 }
 .blog, .blog-hero-text-center{
 	margin: 0 auto;
@@ -481,7 +506,7 @@ img {
 		.admin-icons{
 			float: right;
 			margin-right: 22px;
-			a{
+			#create{
 				color: lightgreen;
 			}
 			#close{
@@ -490,6 +515,9 @@ img {
 			i{
 				font-size: 1.4em;
 				margin-right: 5px;
+			}
+			i:hover{
+				cursor: pointer;
 			}
 		}
 	}
@@ -508,6 +536,7 @@ img {
 }
 .blog-article{
 	margin-bottom: 15px;
+	position: relative;
 	border: 1px solid rgb(224,224,224);
 	.blog-article-text{
 		padding: 16px 22px;
@@ -533,7 +562,7 @@ img {
 		position: relative;
 	}
 }
-.article-img-text, .blog-hero-text{
+.article-img-text, .blog-hero-text, .blog-hero-back{
 	position: absolute;
 	h3{
 		background-color: white;
@@ -560,6 +589,13 @@ img {
 	h3{
 		font-size: 1.6em;
 		line-height: 1.5em;
+	}
+}
+.blog-hero-back{
+	top: 35px;
+	h3{
+		font-size: 1.2em;
+		padding: 3px 5px;
 	}
 }
 .blog-article:last-child, .blog-side-bar-item:last-child{

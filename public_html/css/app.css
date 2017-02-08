@@ -333,6 +333,24 @@ img {
   display: none;
   color: red; }
 
+.change-article {
+  position: absolute;
+  z-index: 5;
+  right: 22px;
+  top: 20px; }
+  .change-article a {
+    padding: 3px 8px;
+    margin-left: 10px;
+    color: white;
+    float: right;
+    font-size: 1.2em; }
+  .change-article i {
+    margin-left: 5px; }
+  .change-article #del {
+    background-color: red; }
+  .change-article #edit {
+    background-color: #2ba6cb; }
+
 .blog-hero {
   width: 100%;
   height: 300px;
@@ -346,6 +364,8 @@ img {
 .blog-hero-text-center {
   height: 300px;
   position: relative; }
+  .blog-hero-text-center .change-article {
+    top: 35px; }
 
 .blog, .blog-hero-text-center {
   margin: 0 auto;
@@ -362,13 +382,15 @@ img {
     .blog .admin-text .admin-icons, .blog-hero-text-center .admin-text .admin-icons {
       float: right;
       margin-right: 22px; }
-      .blog .admin-text .admin-icons a, .blog-hero-text-center .admin-text .admin-icons a {
+      .blog .admin-text .admin-icons #create, .blog-hero-text-center .admin-text .admin-icons #create {
         color: lightgreen; }
       .blog .admin-text .admin-icons #close, .blog-hero-text-center .admin-text .admin-icons #close {
         color: red; }
       .blog .admin-text .admin-icons i, .blog-hero-text-center .admin-text .admin-icons i {
         font-size: 1.4em;
         margin-right: 5px; }
+      .blog .admin-text .admin-icons i:hover, .blog-hero-text-center .admin-text .admin-icons i:hover {
+        cursor: pointer; }
 
 .blog-main, .blog-side-bar {
   display: inline-block;
@@ -382,6 +404,7 @@ img {
 
 .blog-article {
   margin-bottom: 15px;
+  position: relative;
   border: 1px solid #e0e0e0; }
   .blog-article .blog-article-text {
     padding: 16px 22px; }
@@ -401,9 +424,9 @@ img {
     height: 300px;
     position: relative; }
 
-.article-img-text, .blog-hero-text {
+.article-img-text, .blog-hero-text, .blog-hero-back {
   position: absolute; }
-  .article-img-text h3, .blog-hero-text h3 {
+  .article-img-text h3, .blog-hero-text h3, .blog-hero-back h3 {
     background-color: white;
     font-size: 1.4em;
     font-family: 'Montserrat';
@@ -427,6 +450,12 @@ img {
   .blog-hero-text h3 {
     font-size: 1.6em;
     line-height: 1.5em; }
+
+.blog-hero-back {
+  top: 35px; }
+  .blog-hero-back h3 {
+    font-size: 1.2em;
+    padding: 3px 5px; }
 
 .blog-article:last-child, .blog-side-bar-item:last-child {
   margin-bottom: 20px; }

@@ -40,7 +40,36 @@ Class postsModel extends databaseModel
 		}
 
 	}
+	public function updatePost($destination){
 
+		$db = $this->getDatabaseConnection();
+
+		if(!$destination == null){
+			$sql = "UPDATE blog_posts SET title=:title, content=:content, image=:image WHERE id=:id";
+		}else{
+			$sql = "UPDATE blog_posts SET title=:title, content=:content WHERE id=:id";
+		};
+
+		$statement = $db->prepare($sql);
+
+		// Bind the form data to the SQL query
+		$statement->bindValue(':title', $_POST['title']);
+		$statement->bindValue(':content', $_POST['postContent']);
+		if(!$destination == null){
+			$statement->bindValue(':image', $destination);
+		}
+		$statement->bindValue(':id', $_GET['id']);
+
+		$result = $statement->execute();
+
+		if($result == true){
+			header("Location: ./?page=blog&id={$db->lastInsertId()}");
+		}else{
+			header("Location: ./?page=blog.adminPost");
+		}
+
+
+	}
 	public function saveImage($filename){
 
 		$finfo = new finfo(FILEINFO_MIME_TYPE);
