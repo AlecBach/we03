@@ -42,6 +42,21 @@
 						<?= $post['content'] ?>
 					</div>
 				</div>
+				<div class="blog-article">
+					<div class="blog-comments">
+						<h4>Comments</h4><hr>
+						<div class="comments-cont">
+							<div class="comment-item">There are no comments yet! be the first below!</div>
+						</div>
+						<form id="comment-form">
+							<label><span>Leave a comment:</span>
+								<textarea placeholder="enter your comment!" rows="5"></textarea>
+							</label>
+							<button type="submit" class="button">Submit</button>
+						</form>
+
+					</div>
+				</div>
 			</div><!--
 			--><div class="blog-side-bar">
 		 		<div class="blog-side-bar-item mail-sub-box">

@@ -623,6 +623,33 @@ img {
 	margin-bottom: 15px;
 	max-width: 100%;
 }
+.blog-comments{
+	padding: 16px 22px;
+	.comments-cont{
+
+		.comment-item{
+			border-radius: 4px;
+			background-color: white;
+			padding: 8px;
+			border: 1px solid rgb(224,224,224);
+		}
+	}
+	#comment-form{
+
+		
+		span{
+			display: inline-block;
+			font-size: 1.2em !important;
+			padding: 3px 0 0 0 !important;
+		}
+		textarea{
+			margin-bottom: 8px;
+		}
+		button{
+			margin: 0 !important;
+		}
+	}
+}
 .mail-sub-box{
 
 	h3{

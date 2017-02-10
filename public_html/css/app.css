@@ -481,6 +481,22 @@ img {
   margin-bottom: 15px;
   max-width: 100%; }
 
+.blog-comments {
+  padding: 16px 22px; }
+  .blog-comments .comments-cont .comment-item {
+    border-radius: 4px;
+    background-color: white;
+    padding: 8px;
+    border: 1px solid #e0e0e0; }
+  .blog-comments #comment-form span {
+    display: inline-block;
+    font-size: 1.2em !important;
+    padding: 3px 0 0 0 !important; }
+  .blog-comments #comment-form textarea {
+    margin-bottom: 8px; }
+  .blog-comments #comment-form button {
+    margin: 0 !important; }
+
 .mail-sub-box h3 {
   font-size: 1.5em;
   text-align: center;
