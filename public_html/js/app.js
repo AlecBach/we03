@@ -25,6 +25,11 @@ $(document).ready(function(){
 	} else{
 		loggedIn = true;
 	};
+	if($('#myModal')){
+		$(document).ready(function(){
+			$('#myModal').foundation('open');
+		});
+	};
 	contentSizing();
 	positioning();
 	positionHeroText();
@@ -108,6 +113,26 @@ function positioning() {
 			})
 			
 			break;
+		case 'contact':
+			$('#contactPage').each(function(){
+				var marginLarge = verticleCenter({child:this,parent:2});
+				if(!marginLarge){
+					$('#contactPage').css({"margin-top": "20px", "margin-bottom": "20px"});
+				}
+			});
+			var windowWidth = window.innerWidth;
+			if(windowWidth<640){
+				$('#content').css({
+					"min-width": "0"
+				})
+			}else{
+				$('#content').css({
+					"min-width": "1000px"
+				})
+			}
+			verticleCenter({child:$('.text-cont'),parent:1})
+			//verticleCenter({child:$('#contactPage'),parent:1});
+			break;
 	}
 }
 function verticleCenter(info){
@@ -119,6 +144,12 @@ function verticleCenter(info){
 	var parentHeight = $(parent).innerHeight();
 	var margin = parentHeight / 2 - childHeight / 2;
 	$(info.child).css({"margin-top": margin+"px", "margin-bottom": margin+"px"});
+	if(margin < 20){
+		return false;
+	}else{
+		return true;
+	}
+
 }
 function positionOnSlide() {
 	switch (pageId){
@@ -182,7 +213,7 @@ function setNavBar(){
 	if (loggedIn){
 		if (windowWidth < 1196) {
 			$('.burgerOuter').removeClass('hide');
-			integerRemove = 100;
+			integerRemove = 110;
 
 		}else{
 			$('.burgerOuter').addClass('hide');
@@ -193,7 +224,7 @@ function setNavBar(){
 	}else{
 		if (windowWidth < 966) {
 			$('.burgerOuter').removeClass('hide');
-			integerRemove = 100;
+			integerRemove = 110;
 
 		}else{
 			$('.burgerOuter').addClass('hide');
@@ -216,7 +247,7 @@ function positionHeroText(){
 }
 
 function slideErrorText(){
-	if(pageId == "login" || "register" || "editAccount" || "deleteAccount" || "editPass"){
+	if(pageId == "login" || "register" || "editAccount" || "deleteAccount" || "editPass" || "contact"){
 		$('form p').each(function(){
 			//var thisId = $(this).attr('id').slice(0, -8);
 			if (!$(this).html()==""){

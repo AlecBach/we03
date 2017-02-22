@@ -8,8 +8,15 @@ body{
 	background-color: $offWhite;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	width: 100%;
 }
-
+input, textarea, label, body, .button{
+	border-radius: 0 !important;
+}
+ul {
+	list-style: none;
+	margin-left: 0;
+}
 @font-face {
   	font-family: 'Montserrat';
   	font-style: normal;
@@ -130,6 +137,7 @@ body{
 	//background-color: $darkerGrey;
 	background-image: url(../imgs/backgrounds/footer_lodyas.png);
 	color: $lighterGrey;
+	width: 100%;
 	//height: 300px;
 	span {
 		color: $offWhite;
@@ -259,7 +267,7 @@ img {
 	display: inline-block;
 	width: 42px;
 	height: 42px;
-	border-radius: 50%;
+	border-radius: 50% !important;
 	margin-left:10px;
 	margin-top: 5px;
 	img{
@@ -308,7 +316,7 @@ img {
 	}
 	.imgCont{
 		overflow: hidden;
-		border-radius: 50%;
+		border-radius: 50% !important;
 		width: 200px;
 		height: 200px;
 		img{
@@ -546,7 +554,7 @@ img {
 				padding: 0.4em;
 				color: black;
 				display: inline;
-				border-radius: 6px;
+				border-radius: 6px !important;
 				background-color: #e6e6e6;
 			}
 			a:hover{
@@ -703,6 +711,79 @@ img {
 		}
 	}
 }
+//Contact *******************************************************************************************************************************************************************************
+#contactPage{
+	width: 100%;
+	.small-12{
+		h1{
+			text-align: center;
+			margin-bottom: 18px;
+			font-family: 'Montserrat';
+			color: $darkerGrey;
+			line-height: 1em;
+			font-size: 3rem;
+		}
+	}
+	.medium-5{
+		li{
+			text-align: center;
+			color: $darkGrey;
+			i{
+				margin-right: 6px;
+				text-align: center;
+				font-size:30px;
+				line-height: 40px;
+				height: 40px;
+				width: 40px;
+			}
+			
+			.txt-wrap{
+				display: inline-block;
+				vertical-align: top;
+				height: 40px;
+				a{
+					color: $darkGrey;
+					height: 50px;
+					line-height: 40px;
+					font-size: 1.3em;
+				}
+				a:link, a:visited{
+					color: $darkGrey;
+				}
+			}
+		}
+		li:last-child{
+			i{
+				margin-right: 10px;
+			}
+		}
+	}
+	form{
+		textarea, input{
+			margin-bottom: 10px;
+		}
+		textarea {
+			resize: none;
+		}
+		#submitButton{
+			float: right;
+			margin-bottom: 0;
+		}
+		p{
+			margin: -0.4rem 0 0.2rem !important;
+		}
+	}
+	.row{
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		.columns{
+			// padding-left: 0px;
+			// padding-right: 0px;
+		}
+	}
+}
+
 //Medium & up
 @media print, screen and (min-width: 40em){
 	.hero-image > .home-hero-cont {
@@ -736,6 +817,88 @@ img {
 			// 	border-left: 1px solid $darkGrey;
 			// }
 		}
+	}
+	#contactPage{
+		width: 100%;
+		.row{
+			margin: 0;
+			.columns{
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+		.small-12{
+			h1{
+				text-align: center;
+				margin-bottom: 40px;
+				font-family: 'Montserrat';
+				color: $darkerGrey;
+				font-size: 3rem;
+			}
+		}
+		.medium-5{
+			.imgCont{
+				border-radius: 50%;
+				overflow: hidden;
+				height: 100px;
+				width: 100px;
+				display: inline-block;
+				img{
+					width: 100px;
+					height: auto;
+				}
+			}
+			.text-cont{
+				display: inline-block;
+				vertical-align: top;
+				width: calc(100% - 110px);
+				color: $darkGrey;
+				padding-left: 10px;
+				h3{
+					margin-bottom: 8px;
+					line-height: 0.8em;
+				}
+				h4{
+					margin-bottom: 0;
+					font-size: 1.2em;
+					line-height: 0.8em;
+				}
+			}
+			padding-left: 20px !important;
+			li{
+				color: $darkGrey;
+				text-align: left;
+				i{
+					margin-right: 15px;
+					text-align: center;
+					font-size:30px;
+					line-height: 40px;
+					height: 40px;
+					width: 40px;
+				}
+				.txt-wrap{
+					display: inline-block;
+					vertical-align: top;
+					height: 40px;
+					a{
+						color: $darkGrey;
+						height: 50px;
+						line-height: 40px;
+						font-size: 1.3em;
+					}
+					a:link, a:visited{
+						color: $darkGrey;
+					}
+				}
+			}
+		}
+		.medium-7{
+			padding-right: 20px !important
+
+		}
+	}
+	.contact-specific-footer{
+		min-width: 1000px !important;
 	}
 }
 .editThumb{

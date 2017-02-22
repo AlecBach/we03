@@ -1,4 +1,4 @@
-<div class="row expanded">
+<div class="row">
 	<div class="columns medium-offset-1 medium-10 xl-padding account">
 		<form id="loginForm" method="post" action="./?page=account.edit.try"  enctype="multipart/form-data"><!--  method="post" action="login.send" -->
 	      <h2>Edit your account</h2><h6 id="registerLink"><a href="./?page=account">Back to Account</a></h6><hr>

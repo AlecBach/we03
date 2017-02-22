@@ -216,6 +216,18 @@ namespace App\Controllers;
       }
       break;
 
+    case 'contact':
+
+      $controller = new contactController();
+      $controller->show();
+      break;
+
+    case 'contact.try':
+
+      $controller = new contactController();
+      $controller->try();
+      break;
+
     case "naughty":
 
       $controller = new controller404();
